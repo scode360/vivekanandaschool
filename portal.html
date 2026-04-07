@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Vivekananda School Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="Images/School Logo.png" type="image/png">
+    <style>
+        body {
+            background-color: var(--bg-light);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-card {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .login-card h2 { margin-bottom: 30px; color: var(--primary); }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 500; }
+        .form-group input { 
+            width: 100%; 
+            padding: 12px; 
+            border: 1px solid #ddd; 
+            border-radius: var(--radius-sm);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <a href="index.html" style="font-weight: bold; color: var(--secondary); text-decoration: none; display: inline-block; margin-bottom: 20px;"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        <div class="logo" style="margin-bottom: 20px;">
+             <img src="Images/School Logo.png" alt="Logo" style="width: 80px; height: 80px; object-fit: contain; margin: 0 auto;">
+        </div>
+        <h2>Vivekananda School Portal Login</h2>
+        <div class="portal-toggle" style="display: flex; gap: 10px; margin-bottom: 30px; justify-content: center;">
+             <button class="btn btn-primary btn-sm" style="flex: 1;">Student</button>
+             <button class="btn btn-outline btn-sm" style="flex: 1;">Parent</button>
+        </div>
+        <form>
+            <div class="form-group">
+                <label>Username / ID</label>
+                <input type="text" placeholder="Enter Registration ID">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" placeholder="••••••••">
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Login to Portal</button>
+        </form>
+        <p style="margin-top: 20px; font-size: 0.85rem; color: var(--text-gray);">Forgot password? Please contact school administration.</p>
+    </div>
+</body>
+</html>

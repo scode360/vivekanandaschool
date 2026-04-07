@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery | Experience the Best School in Hosur - Vivekananda School</title>
+    <meta name="description" content="Explore photos of our award-winning campus near Hosur. See student activities, sports, and functions at Vivekananda School, Bagalur, the best school in the region.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="Images/School Logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header id="main-header" class="scrolled">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Images/School Logo.png" alt="Vivekananda School Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span class="logo-name">Vivekananda School</span>
+                        <span class="logo-sub">Bagalur</span>
+                    </div>
+                </a>
+            </div>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="admissions.html" class="btn btn-primary">Apply Now</a>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="gallery-banner page-banner" style="height: 350px; display: flex; align-items: center; justify-content: center; color: white; background-image: url('Images/School Image.jpeg');">
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInDown">Our <span class="highlight">Gallery</span></h1>
+            <p class="animate__animated animate__fadeInUp">Visual Journey through Academic Excellence and Vibrant Campus Life</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section-padding">
+        <div class="container">
+            <!-- Filters -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All Photos</button>
+                <button class="filter-btn" data-filter="campus">Campus</button>
+                <button class="filter-btn" data-filter="events">Events & Functions</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+                <button class="filter-btn" data-filter="trips">Trips & Excursions</button>
+            </div>
+
+            <!-- Grid -->
+            <div class="gallery-grid">
+                <!-- Campus -->
+                <div class="gallery-item" data-category="campus">
+                    <img src="Images/School Image.jpeg" alt="School Campus">
+                    <div class="gallery-overlay">Main Campus Building</div>
+                </div>
+                <div class="gallery-item" data-category="campus">
+                    <img src="Images/Screenshot 2026-03-05 150904.png" alt="Admissions Poster">
+                    <div class="gallery-overlay">Interactive Learning Areas</div>
+                </div>
+                <div class="gallery-item" data-category="campus">
+                    <img src="Images/WhatsApp Image 2026-02-17 at 3.27.13 PM.jpeg" alt="Campus Life">
+                    <div class="gallery-overlay">Student Activities</div>
+                </div>
+
+                <!-- Events -->
+                <div class="gallery-item" data-category="events">
+                    <img src="Images/Trip/Achivement.jpeg" alt="Awards Ceremony">
+                    <div class="gallery-overlay">Achievement Awards</div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <img src="Images/Trip/Function.jpeg" alt="Cultural Fest">
+                    <div class="gallery-overlay">Annual Cultural Fest</div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <img src="Images/Trip/Awareness1.jpeg" alt="Awareness Program">
+                    <div class="gallery-overlay">Health Awareness Camp</div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <img src="Images/Trip/Awareness2.jpeg" alt="Student Presentation">
+                    <div class="gallery-overlay">Science Exhibition</div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <img src="Images/Trip/Awareness3.jpeg" alt="Community Service">
+                    <div class="gallery-overlay">Eco-Drive Awareness</div>
+                </div>
+
+                <!-- Sports -->
+                <div class="gallery-item" data-category="sports">
+                    <img src="Images/Trip/sport1.jpeg" alt="Kabbadi Match">
+                    <div class="gallery-overlay">Inter-School Sports</div>
+                </div>
+                <div class="gallery-item" data-category="sports">
+                    <img src="Images/Trip/sport2.jpeg" alt="Athletics">
+                    <div class="gallery-overlay">Annual Sports Day</div>
+                </div>
+                <div class="gallery-item" data-category="sports">
+                    <img src="Images/Trip/sport3.jpeg" alt="Team Sports">
+                    <div class="gallery-overlay">Volleyball Tournament</div>
+                </div>
+                <div class="gallery-item" data-category="sports">
+                    <img src="Images/Trip/sport4.jpeg" alt="March Past">
+                    <div class="gallery-overlay">Opening Ceremony</div>
+                </div>
+                <div class="gallery-item" data-category="sports">
+                    <img src="Images/Trip/sport5.jpeg" alt="Winners">
+                    <div class="gallery-overlay">Victory Celebration</div>
+                </div>
+
+                <!-- Trips -->
+                <div class="gallery-item" data-category="trips">
+                    <img src="Images/Trip/trip1.jpeg" alt="Excursion">
+                    <div class="gallery-overlay">Educational Trip 2024</div>
+                </div>
+                <div class="gallery-item" data-category="trips">
+                    <img src="Images/Trip/trip2.jpeg" alt="Historical Visit">
+                    <div class="gallery-overlay">Heritage Tour</div>
+                </div>
+                <div class="gallery-item" data-category="trips">
+                    <img src="Images/Trip/trip3.jpeg" alt="Nature Walk">
+                    <div class="gallery-overlay">Nature Study Camp</div>
+                </div>
+                <div class="gallery-item" data-category="trips">
+                    <img src="Images/Trip/trip4.jpeg" alt="Museum Visit">
+                    <div class="gallery-overlay">Science Museum Visit</div>
+                </div>
+                <div class="gallery-item" data-category="trips">
+                    <img src="Images/Trip/trip5.jpeg" alt="Adventure">
+                    <div class="gallery-overlay">Adventure Camp</div>
+                </div>
+                <div class="gallery-item" data-category="trips">
+                    <img src="Images/Trip/trip6.jpeg" alt="Group Photo">
+                    <div class="gallery-overlay">Grade VIII Outing</div>
+                </div>
+                <div class="gallery-item" data-category="trips">
+                    <img src="Images/Trip/trip7.jpeg" alt="Picnic">
+                    <div class="gallery-overlay">Annual School Picnic</div>
+                </div>
+                <div class="gallery-item" data-category="trips">
+                    <img src="Images/Trip/trip8.jpeg" alt="Interaction">
+                    <div class="gallery-overlay">Eco-Tourism Trip</div>
+                </div>
+                <div class="gallery-item" data-category="trips">
+                    <img src="Images/Trip/trip9.jpeg" alt="Exploration">
+                    <div class="gallery-overlay">Botany Field Trip</div>
+                </div>
+                <div class="gallery-item" data-category="trips">
+                    <img src="Images/Trip/trip10.jpeg" alt="Site Visit">
+                    <div class="gallery-overlay">Industrial Visit</div>
+                </div>
+                <div class="gallery-item" data-category="trips">
+                    <img src="Images/Trip/trip11.jpeg" alt="Outing">
+                    <div class="gallery-overlay">Fun Day Out</div>
+                </div>
+                <div class="gallery-item" data-category="trips">
+                    <img src="Images/Trip/trip12.jpeg" alt="Observatory">
+                    <div class="gallery-overlay">Planetarium Visit</div>
+                </div>
+                <div class="gallery-item" data-category="trips">
+                    <img src="Images/Trip/trip13.jpeg" alt="Closing Group">
+                    <div class="gallery-overlay">Memorable Moments</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="section-padding">
+        <div class="container cta-box reveal">
+            <h2>See Our Campus in Person</h2>
+            <p>Schedule a visit to Vivekananda School and experience the environment where your child will thrive.</p>
+            <div class="cta-btns">
+                <a href="contact.html" class="btn btn-white">Contact Us</a>
+                <a href="admissions.html" class="btn btn-outline-white">Apply for Admission</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <div class="logo">
+                     <span class="logo-name">Vivekananda School</span>
+                     <span class="logo-sub">Bagalur</span>
+                </div>
+                <p>Nurturing curiosity, character, and lifelong learning with values since 1999.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Students & Parents</h3>
+                <ul>
+
+                    <li><a href="portal.html">Student Portal</a></li>
+                    <li><a href="portal.html">Parent Portal</a></li>
+                    <li><a href="contact.html">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Anna Nagar, Belathur (PO), Bagalur - 635124</p>
+                <p><i class="fas fa-phone"></i> +91 94439 40772</p>
+                <p><i class="fas fa-envelope"></i> info@vivekanandaschoolbagalur.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Vivekananda School, Bagalur. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Gallery Filtering Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                        item.classList.add('animate__animated', 'animate__fadeIn');
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Vivekananda School, Bagalur</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="Images/School Logo.png" type="image/png">
+</head>
+<body class="inner-page">
+    <header id="main-header" class="scrolled">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Images/School Logo.png" alt="Vivekananda School Logo" class="logo-img">
+                    <div class="logo-text">
+                         <span class="logo-name">Vivekananda School</span>
+                         <span class="logo-sub">Bagalur</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-banner" style="background-image: url('Images/School Image.jpeg'); height: 350px; display: flex; align-items: center; justify-content: center; color: white;">
+        <h1 class="animate__animated animate__fadeIn">Contact Us</h1>
+    </div>
+
+    <!-- Contact Info Grid -->
+    <section class="section-padding">
+        <div class="container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; text-align: center; margin-bottom: 50px;">
+            <div class="contact-card reveal" style="padding: 40px; background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+                 <i class="fas fa-map-marker-alt" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px;"></i>
+                 <h3>School Location</h3>
+                 <p>Anna Nagar, Belathur (PO), Bagalur - 635124</p>
+            </div>
+            <div class="contact-card reveal" style="padding: 40px; background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+                 <i class="fas fa-phone-alt" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px;"></i>
+                 <h3>Contact Numbers</h3>
+                 <p>Admin: +91 94439 40772<br>Office: +91 94439 40772</p>
+            </div>
+            <div class="contact-card reveal" style="padding: 40px; background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+                 <i class="fas fa-envelope" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px;"></i>
+                 <h3>Email Inquiries</h3>
+                 <p>info@vivekanandaschoolbagalur.com<br>admissions@vivekanandaschoolbagalur.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form + Map -->
+    <section class="section-padding bg-light">
+        <div class="container about-grid">
+            <div class="contact-form reveal-left">
+                <h2 class="section-title">Enquiry Form</h2>
+                <form action="#" method="post" style="display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 30px;">
+                     <input type="text" placeholder="Full Name" style="padding: 15px; border-radius: var(--radius-sm); border: 1px solid #ddd; width: 100%;">
+                     <input type="email" placeholder="Email Address" style="padding: 15px; border-radius: var(--radius-sm); border: 1px solid #ddd; width: 100%;">
+                     <input type="tel" placeholder="Phone Number" style="padding: 15px; border-radius: var(--radius-sm); border: 1px solid #ddd; width: 100%;">
+                     <select style="padding: 15px; border-radius: var(--radius-sm); border: 1px solid #ddd; width: 100%;">
+                         <option>Subject of Inquiry</option>
+                         <option>Admission Query</option>
+                         <option>Career Opportunity</option>
+                         <option>Fee Structure</option>
+                         <option>Other</option>
+                     </select>
+                     <textarea placeholder="Your Message" rows="5" style="padding: 15px; border-radius: var(--radius-sm); border: 1px solid #ddd; width: 100%;"></textarea>
+                     <button type="submit" class="btn btn-primary" style="width: fit-content; padding: 15px 40px;">Send Message</button>
+                </form>
+            </div>
+            <div class="map-container reveal-right">
+                <div style="width: 100%; height: 450px; background: #ddd; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+                     <!-- Bagalur, Tamil Nadu 635124 -->
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.3546738980833!2d77.8488347!3d12.8252277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6f0b4d49a377%3A0xe67b931c830e0e0a!2sBagalur%2C%20Tamil%20Nadu%20635124!5e0!3m2!1sen!2sin!4v1689512345678" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background-color: #1a1a1a; color: #bdbdbd; padding: 40px 0;">
+        <div class="container text-center" style="text-align: center;">
+            <p>&copy; 2026 Vivekananda School, Bagalur.</p>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
