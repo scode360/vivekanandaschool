@@ -237,8 +237,11 @@ header.scrolled {
 }
 
 .logo-text {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 
 .logo-img {
     height: 100px;
@@ -259,27 +262,39 @@ header.scrolled .logo-img {
 
 @media (max-width: 768px) {
     header.scrolled .logo-img {
-        height: 50px;
+        height: 45px;
+    }
+    .logo-name {
+        font-size: 1.1rem;
+    }
+    .logo-sub {
+        font-size: 0.6rem;
+        letter-spacing: 1px;
     }
 }
+
 
 .logo-name {
     font-weight: 800;
     font-size: 1.6rem;
-    color: var(--primary);
+    color: white; /* Default white for hero background */
     line-height: 1;
+    font-family: 'Roboto', sans-serif;
 }
 
-.header.scrolled .logo-name {
+header.scrolled .logo-name {
     color: var(--primary);
 }
+
 
 .logo-sub {
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--secondary);
+    color: var(--accent); /* Using gold/accent for the location */
+    font-weight: 500;
 }
+
 
 .nav-menu ul {
     display: flex;
@@ -320,16 +335,39 @@ header.scrolled .nav-menu a {
 
 .mobile-menu-toggle {
     display: none;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
+    font-size: 1.2rem;
+    background-color: var(--primary);
     color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: var(--radius-sm);
+    border: none;
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    z-index: 1001;
+    box-shadow: var(--shadow-sm);
+}
+
+
+.mobile-menu-toggle:hover {
+    background-color: var(--primary-light);
+    transform: scale(1.05);
 }
 
 header.scrolled .mobile-menu-toggle {
-    color: var(--text-dark);
+    background-color: var(--primary);
+    color: white;
 }
+
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 
 /* Hero */
 #hero {
@@ -1039,16 +1077,97 @@ footer {
     
     .nav-menu {
         display: none;
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 0;
         left: 0;
         width: 100%;
-        background: white;
+        height: 100vh;
+        background: rgba(46, 125, 50, 0.98); /* Deep brand green with slight transparency */
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         flex-direction: column;
-        padding: 25px 20px;
-        box-shadow: var(--shadow-xl);
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        z-index: 2000;
+        transition: var(--transition);
     }
-    .nav-menu.show { display: flex; animation: slideIn 0.3s ease; }
+
+    .nav-menu.show { 
+        display: flex; 
+        animation: fadeIn 0.4s ease; 
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 30px;
+        gap: 20px; /* Tighter gap for more links if needed */
+        text-align: center;
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .nav-menu a {
+        font-size: 2rem;
+        color: white !important;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        display: block;
+        padding: 10px 0;
+        transition: var(--transition);
+    }
+
+    .nav-menu a:hover {
+        color: var(--accent) !important;
+        transform: scale(1.1);
+    }
+
+    .nav-menu a.active {
+        color: var(--accent) !important;
+        border-bottom: 3px solid var(--accent);
+    }
+
+    /* Add a brand touch at the bottom of the menu */
+    .nav-menu::after {
+        content: 'Nurturing Minds, Building Character';
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.9rem;
+        font-style: italic;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+        position: relative;
+        z-index: 3000; /* Highest priority */
+    }
+
+    .logo {
+        position: relative;
+        z-index: 3000; /* Keep logo visible above menu */
+    }
+
+    /* Animation for the full screen menu */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(1.1); }
+        to { opacity: 1; transform: scale(1); }
+    }
+
+
+    .header-actions .btn {
+        display: none; /* Hide 'Apply Now' from header on mobile to save space, or keep it if requested */
+    }
+    
+    /* Show 'Apply Now' only in hero on mobile */
+    .hero-btns .btn {
+        display: flex;
+    }
+
     
     .page-banner { height: 280px !important; }
 }

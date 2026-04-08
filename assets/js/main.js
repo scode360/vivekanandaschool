@@ -26,12 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenuToggle.addEventListener('click', () => {
         navMenu.classList.toggle('show');
         const icon = mobileMenuToggle.querySelector('i');
+        
         if (navMenu.classList.contains('show')) {
             icon.classList.replace('fa-bars', 'fa-times');
+            document.body.style.overflow = 'hidden'; // Lock scroll
         } else {
             icon.classList.replace('fa-times', 'fa-bars');
+            document.body.style.overflow = ''; // Unlock scroll
         }
     });
+
 
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
