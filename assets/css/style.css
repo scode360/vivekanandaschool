@@ -252,7 +252,7 @@ header.scrolled {
 
 @media (max-width: 768px) {
     .logo-img {
-        height: 60px;
+        height: 50px;
     }
 }
 
@@ -262,13 +262,13 @@ header.scrolled .logo-img {
 
 @media (max-width: 768px) {
     header.scrolled .logo-img {
-        height: 45px;
+        height: 40px;
     }
     .logo-name {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .logo-sub {
-        font-size: 0.6rem;
+        font-size: 0.55rem;
         letter-spacing: 1px;
     }
 }
@@ -1100,21 +1100,20 @@ footer {
 
     .nav-menu ul {
         flex-direction: column;
-        gap: 30px;
-        gap: 20px; /* Tighter gap for more links if needed */
+        gap: 15px; /* Reduced from 30px/20px */
         text-align: center;
         width: 100%;
-        margin-top: 40px;
+        margin-top: 30px;
     }
 
     .nav-menu a {
-        font-size: 2rem;
+        font-size: 1.3rem; /* Reduced from 2rem */
         color: white !important;
         font-weight: 700;
         letter-spacing: 1px;
         text-transform: uppercase;
         display: block;
-        padding: 10px 0;
+        padding: 8px 0;
         transition: var(--transition);
     }
 
