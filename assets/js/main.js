@@ -1,52 +1,56 @@
 /* 
-    Green Valley Public School - Main JS
-    Interactions, Animations, and UI Logic
+    Vivekananda School - Premium Redesign Scripts
 */
 
 document.addEventListener('DOMContentLoaded', () => {
 
     // 1. Header Scroll Effect
     const header = document.querySelector('header');
-    const scrollTopBtn = document.querySelector('.scroll-top');
-
+    
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 80) {
             header.classList.add('scrolled');
-            scrollTopBtn.classList.add('show');
         } else {
             header.classList.remove('scrolled');
-            scrollTopBtn.classList.remove('show');
         }
     });
 
     // 2. Mobile Menu Toggle
-    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const navLinks = document.querySelector('.nav-links');
 
-    mobileMenuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('show');
-        const icon = mobileMenuToggle.querySelector('i');
-        
-        if (navMenu.classList.contains('show')) {
-            icon.classList.replace('fa-bars', 'fa-times');
-            document.body.style.overflow = 'hidden'; // Lock scroll
-        } else {
-            icon.classList.replace('fa-times', 'fa-bars');
-            document.body.style.overflow = ''; // Unlock scroll
-        }
-    });
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+            const icon = mobileToggle.querySelector('i');
+            navLinks.classList.toggle('active');
+            
+            if (navLinks.classList.contains('active')) {
+                icon.classList.replace('fa-bars', 'fa-times');
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.width = '100%';
+                navLinks.style.background = 'white';
+                navLinks.style.padding = '40px';
+                navLinks.style.boxShadow = '0 10px 15px rgba(0,0,0,0.1)';
+                
+                // Styles for mobile links
+                navLinks.querySelectorAll('a').forEach(a => {
+                    a.style.color = '#1E3A8A';
+                    a.style.fontSize = '1.2rem';
+                    a.style.textAlign = 'center';
+                });
+            } else {
+                icon.classList.replace('fa-times', 'fa-bars');
+                navLinks.style.display = '';
+            }
+        });
+    }
 
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!header.contains(e.target) && navMenu.classList.contains('show')) {
-            navMenu.classList.remove('show');
-            mobileMenuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
-        }
-    });
-
-    // 3. Scroll Reveal Animations (Intersection Observer)
-    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    // 3. Scroll Reveal Observer
+    const revealElements = document.querySelectorAll('[data-reveal]');
     
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -56,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, {
-        threshold: 0.1
+        threshold: 0.15
     });
 
     revealElements.forEach(el => revealObserver.observe(el));
@@ -67,14 +71,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const countTo = (element) => {
         const target = +element.getAttribute('data-target');
         let count = 0;
-        const speed = 200; // lower is slower
-        const increment = target / speed;
+        const duration = 2000; // ms
+        const incrementValue = target / (duration / 16); // 60fps
 
         const updateCount = () => {
-            count += increment;
+            count += incrementValue;
             if (count < target) {
                 element.innerText = Math.ceil(count);
-                setTimeout(updateCount, 1);
+                requestAnimationFrame(updateCount);
             } else {
                 element.innerText = target;
             }
@@ -89,56 +93,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 counterObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.8 });
 
     counterElements.forEach(el => counterObserver.observe(el));
 
-    // 5. FAQ Accordion
-    const faqItems = document.querySelectorAll('.faq-item');
-
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
-            
-            // Close all other items
-            faqItems.forEach(faq => faq.classList.remove('active'));
-            
-            // Toggle current item
-            if (!isActive) {
-                item.classList.add('active');
-            }
-        });
-    });
-
-    // 6. Smooth Scrolling for internal links
+    // 5. Smooth Scroll for Internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const target = document.querySelector(targetId);
             if (target) {
                 window.scrollTo({
-                    top: target.offsetTop - 80,
+                    top: target.offsetTop - 100,
                     behavior: 'smooth'
                 });
-                // Close mobile menu if open
-                navMenu.classList.remove('show');
-                if (mobileMenuToggle) {
-                    mobileMenuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                // Close menu if mobile
+                if (navLinks.classList.contains('active')) {
+                    mobileToggle.click();
                 }
             }
         });
     });
-
-    // 7. Simple Logo Placeholder Generation (SVG)
-    const logoImg = document.querySelector('.logo-img');
-    if (logoImg && logoImg.getAttribute('src').includes('placeholder')) {
-        // Just as a fallback if real logo isn't there
-        logoImg.style.display = 'none';
-        const logoIcon = document.createElement('i');
-        logoIcon.className = 'fas fa-graduation-cap';
-        logoIcon.style.fontSize = '2rem';
-        logoIcon.style.color = '#2E7D32';
-        logoImg.parentNode.insertBefore(logoIcon, logoImg);
-    }
 });

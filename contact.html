@@ -2,96 +2,125 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Vivekananda School, Bagalur</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=1200">
+    <title>Contact Us | Vivekananda School | Visit Our Campus</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="Images/School Logo.png">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" href="Images/School Logo.png" type="image/png">
 </head>
-<body class="inner-page">
-    <header id="main-header" class="scrolled">
+<body>
+
+    <!-- Header -->
+    <header class="scrolled">
         <div class="container header-container">
             <div class="logo">
-                <a href="index.html">
-                    <img src="Images/School Logo.png" alt="Vivekananda School Logo" class="logo-img">
+                <a href="index.html" class="logo-link">
+                    <img src="Images/School Logo.png" alt="Logo" class="logo-img">
                     <div class="logo-text">
-                         <span class="logo-name">Vivekananda School</span>
-                         <span class="logo-sub">Bagalur</span>
+                        <span class="logo-name">Vivekananda School</span>
+                        <span class="logo-sub">Bagalur • Excellence Since 1999</span>
                     </div>
                 </a>
             </div>
-            <nav class="nav-menu" id="nav-menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="admissions.html">Admissions</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                </ul>
-            </nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
         </div>
     </header>
 
-    <div class="page-banner" style="background-image: url('Images/School Image.jpeg'); height: 350px; display: flex; align-items: center; justify-content: center; color: white;">
-        <h1 class="animate__animated animate__fadeIn">Contact Us</h1>
-    </div>
-
-    <!-- Contact Info Grid -->
-    <section class="section-padding">
-        <div class="container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; text-align: center; margin-bottom: 50px;">
-            <div class="contact-card reveal" style="padding: 40px; background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
-                 <i class="fas fa-map-marker-alt" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px;"></i>
-                 <h3>School Location</h3>
-                 <p>Anna Nagar, Belathur (PO), Bagalur - 635124</p>
-            </div>
-            <div class="contact-card reveal" style="padding: 40px; background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
-                 <i class="fas fa-phone-alt" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px;"></i>
-                 <h3>Contact Numbers</h3>
-                 <p>Admin: +91 94439 40772<br>Office: +91 94439 40772</p>
-            </div>
-            <div class="contact-card reveal" style="padding: 40px; background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
-                 <i class="fas fa-envelope" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px;"></i>
-                 <h3>Email Inquiries</h3>
-                 <p>info@vivekanandaschoolbagalur.com<br>admissions@vivekanandaschoolbagalur.com</p>
-            </div>
+    <!-- Page Banner -->
+    <section class="hero" style="height: 350px; min-height: 350px; background: url('Images/School Image.jpeg') center/cover;">
+        <div class="hero-overlay"></div>
+        <div class="container text-center">
+            <h1 data-reveal="fade-up">Get In Touch</h1>
+            <p data-reveal="fade-up" style="transition-delay: 0.2s;">Have a question? We would love to hear from you. Visit us or reach out today.</p>
         </div>
     </section>
 
-    <!-- Form + Map -->
-    <section class="section-padding bg-light">
-        <div class="container about-grid">
-            <div class="contact-form reveal-left">
-                <h2 class="section-title">Enquiry Form</h2>
-                <form action="#" method="post" style="display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 30px;">
-                     <input type="text" placeholder="Full Name" style="padding: 15px; border-radius: var(--radius-sm); border: 1px solid #ddd; width: 100%;">
-                     <input type="email" placeholder="Email Address" style="padding: 15px; border-radius: var(--radius-sm); border: 1px solid #ddd; width: 100%;">
-                     <input type="tel" placeholder="Phone Number" style="padding: 15px; border-radius: var(--radius-sm); border: 1px solid #ddd; width: 100%;">
-                     <select style="padding: 15px; border-radius: var(--radius-sm); border: 1px solid #ddd; width: 100%;">
-                         <option>Subject of Inquiry</option>
-                         <option>Admission Query</option>
-                         <option>Career Opportunity</option>
-                         <option>Fee Structure</option>
-                         <option>Other</option>
-                     </select>
-                     <textarea placeholder="Your Message" rows="5" style="padding: 15px; border-radius: var(--radius-sm); border: 1px solid #ddd; width: 100%;"></textarea>
-                     <button type="submit" class="btn btn-primary" style="width: fit-content; padding: 15px 40px;">Send Message</button>
-                </form>
-            </div>
-            <div class="map-container reveal-right">
-                <div style="width: 100%; height: 450px; background: #ddd; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
-                     <!-- Bagalur, Tamil Nadu 635124 -->
-                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.3546738980833!2d77.8488347!3d12.8252277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6f0b4d49a377%3A0xe67b931c830e0e0a!2sBagalur%2C%20Tamil%20Nadu%20635124!5e0!3m2!1sen!2sin!4v1689512345678" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <!-- Main Contact Cards -->
+    <section class="section-padding">
+        <div class="container text-center">
+            <div class="grid grid-3">
+                <div class="card icon-card" data-reveal="fade-up">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>School Location</h3>
+                    <p><a href="https://maps.app.goo.gl/a758d37ec9535060" target="_blank" style="color: inherit;">Vivekananda School, Bagalur, Jogikalasanapalli, Tamil Nadu 635103</a></p>
+                </div>
+                <div class="card icon-card" data-reveal="fade-up" style="transition-delay: 0.1s;">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Call Us</h3>
+                    <p><a href="tel:+919443940772">+91 94439 40772</a></p>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); opacity: 0.8;">Admin Office: Mon-Sat, 9AM-4PM</p>
+                </div>
+                <div class="card icon-card" data-reveal="fade-up" style="transition-delay: 0.2s;">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:vivekanandaschoolbagalur@gmail.com">vivekanandaschoolbagalur@gmail.com</a></p>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); opacity: 0.8;">We aim to respond within 24 hours.</p>
                 </div>
             </div>
+            
+            <div style="margin-top: 50px;">
+                <a href="https://wa.me/919443940772" class="btn btn-secondary" style="background-color: #25D366; border: none; font-size: 1.1rem; padding: 20px 40px; box-shadow: var(--shadow-xl); color: white;">
+                    <i class="fab fa-whatsapp" style="font-size: 1.5rem; margin-right: 12px;"></i> Reach out on WhatsApp
+                </a>
+            </div>
         </div>
     </section>
 
-    <footer style="background-color: #1a1a1a; color: #bdbdbd; padding: 40px 0;">
-        <div class="container text-center" style="text-align: center;">
+    <!-- Visit Section -->
+    <section class="section-padding bg-light">
+        <div class="container grid grid-2" style="align-items: center;">
+            <div class="form-container" data-reveal="fade-right">
+                <span class="section-subtitle">Book a Visit</span>
+                <h2 class="section-title">Schedule a Campus Tour</h2>
+                <p>We welcome you to see our learning environment firsthand. Fill out the form below and ours admissions office will arrange a guided tour for you.</p>
+                
+                <form action="#" style="display: flex; flex-direction: column; gap: 20px; margin-top: 40px;">
+                    <input type="text" placeholder="Your Full Name" style="padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200); width: 100%;">
+                    <div style="display: flex; gap: 20px;">
+                        <input type="tel" placeholder="Phone Number" style="flex: 1; padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200);">
+                        <input type="date" placeholder="Preferred Date" style="flex: 1; padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200); background: white;">
+                    </div>
+                    <textarea placeholder="Tell us about the student's grade/class" rows="4" style="padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200); width: 100%;"></textarea>
+                    <button type="button" class="btn btn-primary" style="align-self: flex-start;">Request Campus Tour</button>
+                </form>
+            </div>
+            
+            <div class="map-embed" data-reveal="fade-left" style="height: 500px; box-shadow: var(--shadow-xl);">
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.039193272801!2d77.87427469678956!3d12.840743899999984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae7588d9e85e15%3A0xa758d37ec9535060!2sVivekananda%20School%2C%20Bagalur!5e0!3m2!1sen!2sin!4v1776089290921!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <img src="Images/School Logo.png" alt="Logo" style="height: 60px;">
+                <p>Nurturing curiosity since 1999.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1Hv3sXMgvA/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/vivekananda_school_bagalur/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@vivekanandaschoolbagalur"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Contact</h3>
+                <p>vivekanandaschoolbagalur@gmail.com</p>
+                <p>+91 94439 40772</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
             <p>&copy; 2026 Vivekananda School, Bagalur.</p>
         </div>
     </footer>
+
     <script src="assets/js/main.js"></script>
 </body>
 </html>

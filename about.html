@@ -2,188 +2,143 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Best CBSE School in Hosur - Vivekananda School</title>
-    <meta name="description" content="Discover the legacy of Vivekananda School, Bagalur, recognized as the best school in Hosur for values-based CBSE education and student growth.">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=1200">
+    <title>About Us | Vivekananda School | Excellence Since 1999</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="Images/School Logo.png">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" href="Images/School Logo.png" type="image/png">
 </head>
-<body class="inner-page">
-    <!-- Header (Same as index) -->
-    <header id="main-header" class="scrolled">
+<body>
+
+    <!-- Header -->
+    <header class="scrolled">
         <div class="container header-container">
             <div class="logo">
-                <a href="index.html">
-                    <img src="Images/School Logo.png" alt="Vivekananda School Logo" class="logo-img">
+                <a href="index.html" class="logo-link">
+                    <img src="Images/School Logo.png" alt="Logo" class="logo-img">
                     <div class="logo-text">
-                         <span class="logo-name">Vivekananda School</span>
-                         <span class="logo-sub">Bagalur</span>
+                        <span class="logo-name">Vivekananda School</span>
+                        <span class="logo-sub">Bagalur • Excellence Since 1999</span>
                     </div>
                 </a>
             </div>
-            <nav class="nav-menu" id="nav-menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About Us</a></li>
-                    <li><a href="admissions.html">Admissions</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <a href="admissions.html" class="btn btn-primary">Apply Now</a>
-                <button class="mobile-menu-toggle" id="mobile-menu-toggle"><i class="fas fa-bars"></i></button>
-            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
         </div>
     </header>
 
-    <div class="page-banner" style="background-image: url('Images/School Image.jpeg'); height: 350px; display: flex; align-items: center; justify-content: center; color: white;">
-        <h1 class="animate__animated animate__fadeIn">About Our Legacy</h1>
-    </div>
-
-    <!-- Our Leadership -->
-    <section class="section-padding">
+    <!-- Page Banner -->
+    <section class="hero" style="height: 400px; min-height: 400px; background: url('Images/School Image.jpeg') center/cover;">
+        <div class="hero-overlay"></div>
         <div class="container">
-            <div class="section-header centered" style="margin-bottom: 60px;">
-                <span class="section-subtitle">Our Leadership</span>
-                <h2 class="section-title">The Visionaries Behind Vivekananda School</h2>
-                <p>Dedicated to excellence and committed to nurturing the leaders of tomorrow.</p>
+            <h1 data-reveal="fade-up">About Our School</h1>
+            <p data-reveal="fade-up" style="transition-delay: 0.2s;">Discover the values, mission, and leadership shaping the future leaders at Bagalur.</p>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="section-padding">
+        <div class="container grid grid-2" style="align-items: center;">
+            <div class="image-box" data-reveal="fade-right">
+                <img src="Images/Trip/Awareness1.jpeg" alt="School Values" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-premium);">
             </div>
-            
-            <div class="leadership-grid">
-                <!-- Correspondent -->
-                <div class="leadership-card reveal-left">
-                    <div class="leader-img-box">
-                        <img src="Images/Thejas G ( correspondent ).jpeg" alt="Thejas G - Correspondent">
+            <div class="content-box" data-reveal="fade-left">
+                <span class="section-subtitle">Our Purpose</span>
+                <h2 class="section-title">The Foundation of Vivekananda Excellence</h2>
+                <p>Since 1999, we have been more than just a school. We are a community dedicated to the moral, intellectual, and physical growth of every child. Our educators are trained to recognize the unique gifts of each student, guiding them toward success with empathy and discipline.</p>
+                <div class="grid grid-2" style="margin-top: 30px;">
+                    <div class="card" style="padding: 24px; border-left: 10px solid var(--secondary);">
+                         <h3>Our Vision</h3>
+                         <p>Empowering children to become responsible global citizens and lifelong learners with integrity.</p>
                     </div>
-                    <div class="leader-info">
-                        <div>
-                            <h3 class="leader-name">Thejas G</h3>
-                            <span class="leader-position">Correspondent</span>
-                        </div>
-                        <div class="leader-quote">
-                            <i class="fas fa-quote-left"></i>
-                            <p>"Education is the manifestation of perfection already in man. Our mission is to provide an environment that fosters academic excellence while building character."</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Principal -->
-                <div class="leadership-card reveal">
-                    <div class="leader-img-box">
-                        <img src="Images/Micheal Raj S ( Principal) M.Sc,B.ed.jpeg" alt="Micheal Raj S - Principal">
-                    </div>
-                    <div class="leader-info">
-                        <div>
-                            <h3 class="leader-name">Micheal Raj S</h3>
-                            <span class="leader-position">M.Sc, B.ed, Principal</span>
-                        </div>
-                        <div class="leader-quote">
-                            <i class="fas fa-quote-left"></i>
-                            <p>"We don't just teach students; we empower them to become the innovators and leaders of tomorrow, prepared for the challenges of an ever-evolving world."</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Vice Principal -->
-                <div class="leadership-card reveal-right">
-                    <div class="leader-img-box">
-                        <img src="Images/Padmini K R( Vice Principal) M.A, B.ed.jpeg" alt="Padmini K R - Vice Principal">
-                    </div>
-                    <div class="leader-info">
-                        <div>
-                            <h3 class="leader-name">Padmini K R</h3>
-                            <span class="leader-position">M.A, B.ed, Vice Principal</span>
-                        </div>
-                        <div class="leader-quote">
-                            <i class="fas fa-quote-left"></i>
-                            <p>"Every child is a unique bloom in the garden of learning. We strive to provide a safe and nurturing environment that encourages critical thinking and creativity."</p>
-                        </div>
+                    <div class="card" style="padding: 24px; border-left: 10px solid var(--primary-light);">
+                         <h3>Our Mission</h3>
+                         <p>To provide high-quality education through modern tools while fostering traditional Hindu values.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Vision & Mission -->
+    <!-- Leadership Section -->
     <section class="section-padding bg-light">
-        <div class="container grid-2">
-             <div class="card reveal" style="background: white; padding: 40px; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
-                 <i class="fas fa-eye" style="font-size: 3rem; color: var(--secondary); margin-bottom: 20px;"></i>
-                 <h3>Our Vision</h3>
-                 <p>To be a premier global institution that empowers learners with modern knowledge and timeless values, fostering a generation that excels in all facets of life and contributes significantly to society.</p>
-             </div>
-             <div class="card reveal" style="background: white; padding: 40px; border-radius: var(--radius-md); border-top: 5px solid var(--primary); box-shadow: var(--shadow-md);">
-                 <i class="fas fa-rocket" style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
-                 <h3>Our Mission</h3>
-                 <p>To provide a safe, nurturing, and innovative learning environment that encourages critical thinking, creativity, and moral integrity through a balanced curriculum and world-class faculty.</p>
-             </div>
+        <div class="container text-center">
+            <span class="section-subtitle">Our Leadership</span>
+            <h2 class="section-title">Dedicated to Educational Innovation</h2>
+            <div class="grid grid-3" style="margin-top: 50px;">
+                <div class="card icon-card" data-reveal="fade-up">
+                    <img src="Images/Thejas G ( correspondent ).jpeg" alt="Correspondent" style="width: 140px; height: 140px; border-radius: 50%; border: 5px solid var(--white); box-shadow: var(--shadow-md); object-fit: cover;">
+                    <h3>Mr. Thejas G</h3>
+                    <span style="color: var(--primary-light); font-weight: 600;">Correspondent</span>
+                    <p style="font-size: 0.9rem; font-style: italic;">"Nurturing every child with traditional values and a modern vision for global success."</p>
+                </div>
+                <div class="card icon-card" data-reveal="fade-up" style="transition-delay: 0.1s;">
+                    <img src="Images/Micheal Raj S ( Principal) M.Sc,B.ed.jpeg" alt="Principal" style="width: 140px; height: 140px; border-radius: 50%; border: 5px solid var(--white); box-shadow: var(--shadow-md); object-fit: cover;">
+                    <h3>Mr. Micheal Raj S</h3>
+                    <span style="color: var(--primary-light); font-weight: 600;">Principal, M.Sc, B.Ed.</span>
+                    <p style="font-size: 0.9rem; font-style: italic;">"Our focus is beyond academics—we build character and curiosity in every grade."</p>
+                </div>
+                <div class="card icon-card" data-reveal="fade-up" style="transition-delay: 0.2s;">
+                    <img src="Images/Padmini K R( Vice Principal) M.A, B.ed.jpeg" alt="Vice Principal" style="width: 140px; height: 140px; border-radius: 50%; border: 5px solid var(--white); box-shadow: var(--shadow-md); object-fit: cover;">
+                    <h3>Mrs. Padmini K R</h3>
+                    <span style="color: var(--primary-light); font-weight: 600;">Vice Principal, M.A, B.Ed.</span>
+                    <p style="font-size: 0.9rem; font-style: italic;">"Creating a safe, disciplined, and nurturing environment for holistic growth."</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Activity Highlights -->
+    <!-- Activity Section -->
     <section class="section-padding">
         <div class="container text-center">
-            <div class="section-header centered" style="text-align: center; margin-bottom: 50px;">
-                <h2 class="section-title">Beyond the Classroom</h2>
-                <p>We focus on holistic development through various awareness programs and outdoor activities.</p>
-            </div>
-            <div class="grid-3">
-                <img src="Images/Trip/Awareness1.jpeg" alt="Awareness Program" style="border-radius: var(--radius-md); width: 100%; height: 250px; object-fit: cover; box-shadow: var(--shadow-md);">
-                <img src="Images/Trip/Awareness2.jpeg" alt="Student Presentation" style="border-radius: var(--radius-md); width: 100%; height: 250px; object-fit: cover; box-shadow: var(--shadow-md);">
-                <img src="Images/Trip/Awareness3.jpeg" alt="Community Service" style="border-radius: var(--radius-md); width: 100%; height: 250px; object-fit: cover; box-shadow: var(--shadow-md);">
-            </div>
-            <div style="margin-top: 50px;">
+             <span class="section-subtitle">Beyond Academics</span>
+             <h2 class="section-title">Holistic Development in Practice</h2>
+             <div class="grid grid-3" style="margin-top: 40px;">
+                <img src="Images/Trip/Awareness2.jpeg" alt="Awareness Program" style="border-radius: var(--radius-md); width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+                <img src="Images/Trip/sport1.jpeg" alt="Sports events" style="border-radius: var(--radius-md); width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+                <img src="Images/Trip/Awareness3.jpeg" alt="Activities" style="border-radius: var(--radius-md); width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+             </div>
+             <div style="margin-top: 50px;">
                 <a href="gallery.html" class="btn btn-outline">Explore More in Gallery <i class="fas fa-arrow-right" style="margin-left: 10px;"></i></a>
-            </div>
+             </div>
         </div>
     </section>
 
-    <!-- Footer (Same as index) -->
     <!-- Footer -->
     <footer>
         <div class="container footer-grid">
-            <div class="footer-info">
-                <div class="logo">
-                     <span class="logo-name">Vivekananda School</span>
-                     <span class="logo-sub">Bagalur</span>
-                </div>
-                <p>Nurturing curiosity, character, and lifelong learning with values since 1999.</p>
+            <div class="footer-about">
+                <img src="Images/School Logo.png" alt="Logo" style="height: 60px;">
+                <p>The most trusted name in Bagalur education since 1999.</p>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/share/1Hv3sXMgvA/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/vivekananda_school_bagalur/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@vivekanandaschoolbagalur"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div class="footer-links">
                 <h3>Quick Links</h3>
                 <ul>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="admissions.html">Admissions</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-links">
-                <h3>Students & Parents</h3>
-                <ul>
-
-                    <li><a href="portal.html">Student Portal</a></li>
-                    <li><a href="portal.html">Parent Portal</a></li>
-                    <li><a href="contact.html">Careers</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h3>Contact Us</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Anna Nagar, Belathur (PO), Bagalur - 635124</p>
-                <p><i class="fas fa-phone"></i> +91 94439 40772</p>
-                <p><i class="fas fa-envelope"></i> info@vivekanandaschoolbagalur.com</p>
+                <h3>Campus</h3>
+                <p>Vivekananda School, Bagalur, Jogikalasanapalli, Tamil Nadu 635103</p>
+                <p style="margin-top: 10px;">+91 94439 40772</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Vivekananda School, Bagalur. All Rights Reserved.</p>
+            <p>&copy; 2026 Vivekananda School, Bagalur.</p>
         </div>
     </footer>
 

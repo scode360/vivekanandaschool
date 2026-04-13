@@ -2,378 +2,422 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vivekananda School | Best School in Hosur & Bagalur | CBSE Excellence</title>
-    <meta name="description" content="Looking for the best school in Hosur? Vivekananda School, Bagalur offers top-tier CBSE education, holistic development, and world-class facilities. Admissions open for 2026-27.">
-    <meta name="keywords" content="best school in hosur, top school in bagalur, cbse school hosur, vivekananda school bagalur, international school hosur, schools in hosur town, best primary school hosur">
-    
-    <!-- JSON-LD School Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "School",
-      "name": "Vivekananda School",
-      "alternateName": "Vivekananda School Bagalur",
-      "url": "https://vivekanandaschoolbagalur.com",
-      "logo": "https://vivekanandaschoolbagalur.com/Images/School%20Logo.png",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Anna Nagar, Belathur (PO), Bagalur",
-        "addressLocality": "Hosur",
-        "addressRegion": "Tamil Nadu",
-        "postalCode": "635124",
-        "addressCountry": "IN"
-      },
-      "telephone": "+91 94439 40772",
-      "openingHours": "Mo-Sa 08:30-15:00",
-      "priceRange": "$$"
-    }
-    </script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=1200">
+    <title>Vivekananda School | Shaping Future Leaders with Care & Excellence</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Vivekananda School, Bagalur - Providing a safe, high-quality, value-based education for children seeking holistic development and academic excellence.">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="Images/School Logo.png" type="image/png">
-    <!-- Animate.css for quick animations -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="icon" type="image/png" href="Images/School Logo.png">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header id="main-header">
+    <!-- Sticky Navigation -->
+    <header>
         <div class="container header-container">
             <div class="logo">
-                <a href="index.html">
+                <a href="index.html" class="logo-link">
                     <img src="Images/School Logo.png" alt="Vivekananda School Logo" class="logo-img">
                     <div class="logo-text">
                         <span class="logo-name">Vivekananda School</span>
-                        <span class="logo-sub">Bagalur</span>
+                        <span class="logo-sub">Bagalur • Excellence Since 1999</span>
                     </div>
                 </a>
             </div>
             
-            <nav class="nav-menu" id="nav-menu">
-                <ul>
+            <nav class="nav-menu">
+                <ul class="nav-links">
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="admissions.html">Admissions</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+                <div class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
             </nav>
 
             <div class="header-actions">
-                <a href="admissions.html" class="btn btn-primary">Apply Now</a>
-                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </button>
+                <a href="admissions.html" class="btn btn-secondary btn-sm">Apply Now</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-slider">
-            <div class="hero-slide active" style="background-image: url('Images/School Image.jpeg');">
-                <div class="container hero-content">
-                    <h1 class="animate__animated animate__fadeInUp">Admissions <span class="highlight">OPEN 2026-27</span></h1>
-                    <p class="animate__animated animate__fadeInUp animate__delay-1s">From Kindergarten to Grade IX and XI. Enroll now for a world-class education focused on academic excellence and character building.</p>
-                    <div class="hero-btns animate__animated animate__fadeInUp animate__delay-2s">
-                        <a href="about.html" class="btn btn-secondary">Best CBSE School</a>
-                        <a href="admissions.html" class="btn btn-primary">Enroll in Hosur <i class="fas fa-arrow-right"></i></a>
+    <!-- 1. Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <h1 data-reveal="fade-up">Shaping Future Leaders with Care & Excellence</h1>
+            <p data-reveal="fade-up" style="transition-delay: 0.2s;">Safe, value-based education with modern learning methods for your child's holistic growth.</p>
+            <div class="hero-btns" data-reveal="fade-up" style="transition-delay: 0.4s;">
+                <a href="contact.html" class="btn btn-secondary">Book a Campus Visit</a>
+                <a href="admissions.html" class="btn btn-white">Apply Now 2026-27</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Trust Bar -->
+    <div class="container">
+        <section class="trust-bar" data-reveal="fade-up">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span>Experienced Faculty</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Safe Campus</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Smart Classrooms</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-child"></i>
+                    <span>Holistic Development</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 3. About Section -->
+    <section class="section-padding" id="about">
+        <div class="container academics-grid">
+            <div class="image-box" data-reveal="fade-right">
+                <img src="Images/School Image.jpeg" alt="School Campus" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);">
+            </div>
+            <div class="academics-content" data-reveal="fade-left">
+                <span class="section-subtitle">Since 1999</span>
+                <h2 class="section-title">A Tradition of Excellence, A Future of Innovation</h2>
+                <p>Vivekananda School is dedicated to providing a nurturing environment where children are encouraged to explore their potential. Our mission is to combine traditional values with modern educational methods to build character, discipline, and intellectual curiosity.</p>
+                <div class="grid grid-2" style="margin-top: 30px;">
+                    <div class="card" style="padding: 24px;">
+                        <h4 style="margin-bottom: 10px; font-size: 1.1rem;"><i class="fas fa-eye" style="margin-right: 10px; color: var(--secondary);"></i> Our Vision</h4>
+                        <p style="font-size: 0.9rem;">To empower students to become compassionate leaders and lifelong learners.</p>
                     </div>
+                    <div class="card" style="padding: 24px;">
+                        <h4 style="margin-bottom: 10px; font-size: 1.1rem;"><i class="fas fa-bullseye" style="margin-right: 10px; color: var(--secondary);"></i> Our Mission</h4>
+                        <p style="font-size: 0.9rem;">To provide high-quality education focused on safety, integrity, and discipline.</p>
+                    </div>
+                </div>
+                <div style="margin-top: 40px;">
+                    <a href="about.html" class="btn btn-outline">Learn More About Us</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Quick Highlights -->
-    <section id="highlights">
-        <div class="container highlights-container">
-            <div class="highlight-card reveal">
-                <div class="icon-box"><i class="fas fa-graduation-cap"></i></div>
-                <h3>Academic Excellence</h3>
-                <p>Consistent high results in board examinations year after year.</p>
-            </div>
-            <div class="highlight-card reveal">
-                <div class="icon-box"><i class="fas fa-flask"></i></div>
-                <h3>Modern Facilities</h3>
-                <p>State-of-the-art labs and smart classrooms for digital learning.</p>
-            </div>
-            <div class="highlight-card reveal">
-                <div class="icon-box"><i class="fas fa-basketball-ball"></i></div>
-                <h3>Holistic Growth</h3>
-                <p>Wide range of sports, arts, and extracurricular activities.</p>
-            </div>
-            <div class="highlight-card reveal">
-                <div class="icon-box"><i class="fas fa-bus"></i></div>
-                <h3>Transport & Safety</h3>
-                <p>Safe and efficient school bus network covering entire city.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Preview Section -->
-    <section id="about-preview" class="section-padding">
-        <div class="container about-grid">
-            <div class="about-image reveal-left">
-                <div class="image-stack">
-                    <img src="Images/Screenshot 2026-03-05 150904.png" alt="Admissions Open" class="main-img" style="border: 5px solid white; box-shadow: var(--shadow-lg);">
-                    <div class="experience-badge">
-                        <span class="num">25+</span>
-                        <span class="text">Years of Quality Education</span>
-                    </div>
-                </div>
-            </div>
-            <div class="about-text reveal-right">
-                <span class="section-subtitle">Welcome to Vivekananda School</span>
-                <h2 class="section-title">Nurturing Minds, Building Character</h2>
-                <p>Vivekananda School is dedicated to providing a holistic educational experience that goes beyond textbooks. We believe in fostering curiosity, critical thinking, and a sense of responsibility in every student.</p>
-                <ul class="check-list">
-                    <li><i class="fas fa-check-circle"></i> Experienced & Passionate Educators</li>
-                    <li><i class="fas fa-check-circle"></i> Advanced CBSE Curriculum integration</li>
-                    <li><i class="fas fa-check-circle"></i> Personalized Student Attention</li>
-                    <li><i class="fas fa-check-circle"></i> Vibrant Co-curricular Culture</li>
-                </ul>
-                <a href="about.html" class="btn btn-outline">Discover Our Mission</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Parent Quick Access Bar -->
-    <section class="parent-quick-bar" style="background: var(--primary-dark); color: white; padding: 15px 0;">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
-            <span style="font-weight: 500; font-size: 0.9rem;"><i class="fas fa-bullhorn" style="margin-right: 10px; color: var(--accent);"></i> New: Admission Open for 2026-27 Session</span>
-            <div style="display: flex; gap: 20px;">
-                <a href="portal.html" style="font-size: 0.85rem; display: flex; align-items: center; gap: 5px;"><i class="fas fa-user-circle"></i> Parent Login</a>
-                <a href="admissions.html" style="font-size: 0.85rem; display: flex; align-items: center; gap: 5px;"><i class="fas fa-file-invoice"></i> Fee Payment</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Parent Journey Section -->
+    <!-- 4. Why Choose Us -->
     <section class="section-padding bg-light">
-        <div class="container">
-            <div class="section-header centered" style="text-align: center; margin-bottom: 60px;">
-                <span class="section-subtitle">Simplified Process</span>
-                <h2 class="section-title">The Parent's Journey at Vivekananda</h2>
-                <p>Everything you need to know, from discovery to admission and student tracking.</p>
-            </div>
+        <div class="container text-center">
+            <span class="section-subtitle">Excellence in Education</span>
+            <h2 class="section-title">Why Parents Trust Vivekananda</h2>
             
-            <div class="journey-grid">
-                <!-- Step 1 -->
-                <div class="journey-item reveal" style="text-align: center; position: relative; padding: 30px; background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-top: 5px solid var(--secondary);">
-                    <div class="step-num" style="width: 50px; height: 50px; background: var(--secondary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: -55px auto 20px; font-size: 1.2rem; border: 4px solid var(--bg-light);">1</div>
-                    <i class="fas fa-search" style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 20px;"></i>
-                    <h3>Discover</h3>
-                    <p>Explore our campus and values through our About section and Gallery.</p>
-                    <div style="margin-top: 20px;">
-                         <a href="about.html" class="btn btn-outline btn-sm">Explore Campus</a>
+            <div class="grid grid-3" style="margin-top: 50px;">
+                <div class="card icon-card" data-reveal="fade-up">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Individual Attention</h3>
+                    <p>Small class sizes ensure every child receives the personalized guidance they need to succeed.</p>
+                </div>
+                <div class="card icon-card" data-reveal="fade-up" style="transition-delay: 0.1s;">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <h3>Activity-Based Learning</h3>
+                    <p>We teach concepts through practical activities, making learning engaging and memorable.</p>
+                </div>
+                <div class="card icon-card" data-reveal="fade-up" style="transition-delay: 0.2s;">
+                    <i class="fas fa-bus"></i>
+                    <h3>Safe Transport</h3>
+                    <p>Our GPS-tracked bus facility ensures safe pick-up and drop-off for students across the region.</p>
+                </div>
+                <div class="card icon-card" data-reveal="fade-up" style="transition-delay: 0.3s;">
+                    <i class="fas fa-book-reader"></i>
+                    <h3>Qualified Teachers</h3>
+                    <p>Our educators are not just teachers, but mentors trained in the latest pedagogical methods.</p>
+                </div>
+                <div class="card icon-card" data-reveal="fade-up" style="transition-delay: 0.4s;">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Strong Results</h3>
+                    <p>Consistently achieving 100% academic results while focusing on moral development.</p>
+                </div>
+                <div class="card icon-card" data-reveal="fade-up" style="transition-delay: 0.5s;">
+                    <i class="fas fa-heart"></i>
+                    <h3>Value-Based Core</h3>
+                    <p>Instilling empathy, honesty, and discipline as the foundation of future success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Academics Section -->
+    <section class="section-padding">
+        <div class="container academics-grid">
+            <div class="academics-content" data-reveal="fade-right">
+                <span class="section-subtitle">Nurturing Minds</span>
+                <h2 class="section-title">Academic Excellence for Every Grade</h2>
+                <p>We offer a comprehensive curriculum from Primary to Higher Secondary. Our approach balances conceptual clarity with practical applications, ensuring students are ready for real-world challenges.</p>
+                <div class="trust-item" style="flex-direction: row; text-align: left; margin-bottom: 20px;">
+                    <i class="fas fa-check-circle" style="font-size: 1.5rem; color: var(--secondary);"></i>
+                    <div style="margin-left: 15px;">
+                        <h4 style="margin: 0;">Primary & Middle School</h4>
+                        <p style="margin: 0; font-size: 0.9rem;">Foundation in core subjects through interactive workshops.</p>
                     </div>
                 </div>
-                <!-- Step 2 -->
-                <div class="journey-item reveal" style="text-align: center; position: relative; padding: 30px; background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-top: 5px solid var(--primary);">
-                    <div class="step-num" style="width: 50px; height: 50px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: -55px auto 20px; font-size: 1.2rem; border: 4px solid var(--bg-light);">2</div>
-                    <i class="fas fa-file-contract" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px;"></i>
-                    <h3>Apply Online</h3>
-                    <p>Hassle-free online application for admissions for the 2026-27 academic session.</p>
-                    <div style="margin-top: 20px;">
-                         <a href="admissions.html" class="btn btn-primary btn-sm">Start Application</a>
+                <div class="trust-item" style="flex-direction: row; text-align: left; margin-bottom: 30px;">
+                    <i class="fas fa-check-circle" style="font-size: 1.5rem; color: var(--secondary);"></i>
+                    <div style="margin-left: 15px;">
+                        <h4 style="margin: 0;">Secondary & Higher Secondary</h4>
+                        <p style="margin: 0; font-size: 0.9rem;">Intensive coaching and preparation for competitive futures.</p>
                     </div>
                 </div>
-                <!-- Step 3 -->
-                <div class="journey-item reveal" style="text-align: center; position: relative; padding: 30px; background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-top: 5px solid var(--accent);">
-                    <div class="step-num" style="width: 50px; height: 50px; background: var(--accent); color: var(--text-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: -55px auto 20px; font-size: 1.2rem; border: 4px solid var(--bg-light);">3</div>
-                    <i class="fas fa-chart-line" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 20px;"></i>
-                    <h3>Track Growth</h3>
-                    <p>Use our portal to stay updated on your child's grades, attendance, and events.</p>
-                    <div style="margin-top: 20px;">
-                         <a href="portal.html" class="btn btn-outline btn-sm">Login to Portal</a>
+                <a href="admissions.html" class="btn btn-primary">Admissions Open 2026-27</a>
+            </div>
+            <div class="image-box" data-reveal="fade-left">
+                <img src="Images/Trip/Achivement.jpeg" alt="Academic Awards" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);">
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Facilities -->
+    <section class="section-padding bg-light">
+        <div class="container text-center">
+            <span class="section-subtitle">World-Class Environment</span>
+            <h2 class="section-title">Designed for Holistic Growth</h2>
+            
+            <div class="facilities-grid" style="margin-top: 50px;">
+                <div class="facility-item" data-reveal="fade-up">
+                    <img src="Images/Trip/Awareness3.jpeg" alt="Smart Classroom">
+                    <div class="facility-overlay">
+                        <h3>Smart Classrooms</h3>
+                        <p>Digital learning tools in every room.</p>
+                    </div>
+                </div>
+                <div class="facility-item" data-reveal="fade-up" style="transition-delay: 0.1s;">
+                    <img src="Images/Trip/sport2.jpeg" alt="Playground">
+                    <div class="facility-overlay">
+                        <h3>Sports & Playground</h3>
+                        <p>Promoting physical health and teamwork.</p>
+                    </div>
+                </div>
+                <div class="facility-item" data-reveal="fade-up" style="transition-delay: 0.2s;">
+                    <img src="Images/Trip/trip1.jpeg" alt="Science Lab" style="object-position: center;">
+                    <div class="facility-overlay">
+                        <h3>Modern Labs</h3>
+                        <p>Fully equipped Science and Computer labs.</p>
+                    </div>
+                </div>
+                <div class="facility-item" data-reveal="fade-up" style="transition-delay: 0.3s;">
+                    <img src="Images/Trip/trip1.jpeg" alt="Library">
+                    <div class="facility-overlay">
+                        <h3>Resourceful Library</h3>
+                        <p>A vast collection of learning materials.</p>
+                    </div>
+                </div>
+                <div class="facility-item" data-reveal="fade-up" style="transition-delay: 0.4s;">
+                    <img src="Images/Trip/trip6.jpeg" alt="Transport">
+                    <div class="facility-overlay">
+                        <h3>Safe Transport</h3>
+                        <p>Connected, safe, and comfortable buses.</p>
+                    </div>
+                </div>
+                <div class="facility-item" data-reveal="fade-up" style="transition-delay: 0.5s;">
+                    <img src="Images/Trip/Awareness2.jpeg" alt="Auditorium">
+                    <div class="facility-overlay">
+                        <h3>Auditorium</h3>
+                        <p>Space for creativity and community events.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Achievement Counters -->
-    <section id="achievements" class="section-padding dark-bg">
-        <div class="container animate-on-scroll">
-            <div class="counters">
-                <div class="counter-item">
-                    <span class="counter-num" data-target="2000">0</span><span class="plus">+</span>
-                    <p>Total Students</p>
+    <!-- 7. Achievements / Stats Section (Extra Improvement) -->
+    <section class="section-padding bg-primary text-white">
+        <div class="container trust-grid">
+            <div class="trust-item">
+                <span class="counter-num" data-target="25" style="font-size: 3rem; font-weight: 800; color: var(--secondary);">0</span>
+                <span style="color: white;">Years of Excellence</span>
+            </div>
+            <div class="trust-item">
+                <span class="counter-num" data-target="1500" style="font-size: 3rem; font-weight: 800; color: var(--secondary);">0</span>
+                <span style="color: white;">Happy Students</span>
+            </div>
+            <div class="trust-item">
+                <span class="counter-num" data-target="100" style="font-size: 3rem; font-weight: 800; color: var(--secondary);">0</span>
+                <span style="color: white;">Faculty Experts</span>
+            </div>
+            <div class="trust-item">
+                <span class="counter-num" data-target="100" style="font-size: 3rem; font-weight: 800; color: var(--secondary);">0</span>
+                <span style="color: white;">% Results Record</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container text-center">
+            <span class="section-subtitle">Experience our Campus</span>
+            <h2 class="section-title">Traditional Day & Food Festival - 2025</h2>
+            <div id="video-placeholder" style="margin-top: 40px; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-xl); aspect-ratio: 16/9; background: #000; cursor: pointer;" onclick="this.innerHTML = '<iframe width=\'100%\' height=\'100%\' src=\'https://www.youtube.com/embed/_tS2bRV2Il8?autoplay=1\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'">
+                 <img src="https://img.youtube.com/vi/_tS2bRV2Il8/maxresdefault.jpg" alt="Traditional Day & Food Festival 2025" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;">
+                 <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90px; height: 90px; background: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--primary); box-shadow: 0 10px 25px rgba(0,0,0,0.3); transition: var(--transition);">
+                     <i class="fas fa-play"></i>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Testimonials -->
+    <section class="section-padding bg-light">
+        <div class="container text-center">
+            <span class="section-subtitle">Parent Perspectives</span>
+            <h2 class="section-title">What the Vivekananda Family Says</h2>
+            
+            <div class="testimonials-grid" style="margin-top: 50px;">
+                <div class="testimonial-card" data-reveal="fade-up">
+                    <p class="testimonial-text">"The discipline and value-based education at Vivekananda have completely transformed my son's attitude towards learning. A truly safe environment."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Mrs. Ananya Sharma</h4>
+                            <span>Parent of Class VII Student</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="counter-item">
-                    <span class="counter-num" data-target="150">0</span><span class="plus">+</span>
-                    <p>Qualified Teachers</p>
+                <div class="testimonial-card" data-reveal="fade-up" style="transition-delay: 0.1s;">
+                    <p class="testimonial-text">"Sending our children here was the best decision. The teachers give individual attention, and the smart classroom facilities are outstanding."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Mr. Rajesh Kumar</h4>
+                            <span>Parent of Primary Students</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="counter-item">
-                    <span class="counter-num" data-target="98">0</span><span class="plus">%</span>
-                    <p>Board Pass Rate</p>
-                </div>
-                <div class="counter-item">
-                    <span class="counter-num" data-target="50">0</span><span class="plus">+</span>
-                    <p>Awards Won</p>
+                <div class="testimonial-card" data-reveal="fade-up" style="transition-delay: 0.2s;">
+                    <p class="testimonial-text">"A model school for holistic development. My child loves the sports activities and the science labs. Highly recommended for every parent in Bagalur."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Mrs. Kavitha S.</h4>
+                            <span>Parent of Class X Student</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Notice Board & Events -->
-    <section id="updates" class="section-padding">
+    <!-- 10. Call to Action -->
+    <section class="section-padding final-cta text-center">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Latest Updates & Notices</h2>
-                <p>Stay informed about important school dates and announcements.</p>
-            </div>
-            <div class="update-grid">
-                <!-- Notice Board -->
-                <div class="notice-board-container reveal-left">
-                    <div class="notice-header">
-                        <h3><i class="fas fa-bullhorn"></i> Notice Board</h3>
-                    </div>
-                    <div class="notice-list">
-                        <div class="notice-item">
-                            <span class="date">Oct 15</span>
-                            <p>Final Registration for Annual Sports Meet 2024</p>
-                            <span class="badge new">New</span>
-                        </div>
-                        <div class="notice-item">
-                            <span class="date">Oct 12</span>
-                            <p>Dussehra Holidays - School closed from Oct 24th</p>
-                        </div>
-                        <div class="notice-item">
-                            <span class="date">Oct 10</span>
-                            <p>Parent-Teacher Meeting for Primary Section</p>
-                        </div>
-                        <div class="notice-item">
-                            <span class="date">Oct 05</span>
-                            <p>Inter-school Science Fair results announced</p>
-                        </div>
-                    </div>
-
-                </div>
-                
-                <!-- Upcoming Event -->
-                <div class="event-card-main reveal-right">
-                    <div class="event-img-box">
-                        <img src="Images/Trip/Function.jpeg" alt="Main Event">
-                        <div class="event-date-large">
-                            <span class="day">28</span>
-                            <span class="month">OCT</span>
-                        </div>
-                    </div>
-                    <div class="event-details">
-                        <h3>Annual Cultural Fest: UTOPIA 2024</h3>
-                        <p><i class="fas fa-clock"></i> 09:00 AM - 04:00 PM</p>
-                        <p><i class="fas fa-map-marker-alt"></i> School Auditorium</p>
-                        <p>Join us for a day of vibrant performances and cultural celebration by our talented students.</p>
-                        <a href="admissions.html" class="btn btn-secondary btn-sm">Join Now</a>
-                    </div>
-                </div>
+            <h2 class="animate__animated animate__pulse animate__infinite">Give Your Child the Best Future</h2>
+            <p style="color: white; font-size: 1.2rem; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">Join the 2026-27 Academic Session. Secure a seat in the most trusted school in Bagalur today.</p>
+            <div class="hero-btns" style="justify-content: center;">
+                <a href="admissions.html" class="btn btn-secondary">Apply Online Now</a>
+                <a href="contact.html" class="btn btn-white">Contact Admissions</a>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="section-padding bg-light">
+    <!-- 11. Contact Section -->
+    <section class="section-padding" id="contact">
         <div class="container">
-            <div class="section-header centered">
-                <span class="section-subtitle">Common Questions</span>
-                <h2 class="section-title">Frequently Asked Questions</h2>
-            </div>
-            <div class="faq-container">
-                <div class="faq-item reveal">
-                    <div class="faq-question">What is the admission process? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Registration forms are available online and at the school office. After submission, an interaction/assessment is scheduled.</div>
+            <div class="contact-grid">
+                <div class="contact-info" data-reveal="fade-right">
+                    <h2 class="section-title">Visit Our Campus</h2>
+                    <p>Experience the Vivekananda difference firsthand. Our admissions office is open Monday to Saturday, 9 AM to 4 PM.</p>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>School Location</h4>
+                            <p><a href="https://maps.app.goo.gl/a758d37ec9535060" target="_blank" style="color: inherit;">Vivekananda School, Bagalur, RVRH+7JW, Jogikalasanapalli, Tamil Nadu 635103</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p><a href="tel:+919443940772">+91 94439 40772</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p><a href="mailto:vivekanandaschoolbagalur@gmail.com">vivekanandaschoolbagalur@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 20px;">
+                        <a href="https://wa.me/919443940772" class="btn btn-primary" style="background-color: #25D366; border: none; box-shadow: none;">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                    </div>
                 </div>
-                <div class="faq-item reveal">
-                    <div class="faq-question">What board follows the school's curriculum? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">We follow the CBSE (Central Board of Secondary Education) curriculum for all grades from Foundation to Higher Secondary.</div>
-                </div>
-                <div class="faq-item reveal">
-                    <div class="faq-question">What are the school timings? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Primary Section: 8:30 AM - 1:30 PM. Secondary Section: 8:00 AM - 2:30 PM.</div>
-                </div>
-                <div class="faq-item reveal">
-                    <div class="faq-question">Does the school provide transport? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Yes, we have a fleet of safe, GPS-enabled buses covering major routes in the city.</div>
+                <div class="map-embed" data-reveal="fade-left">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.039193272801!2d77.87427469678956!3d12.840743899999984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae7588d9e85e15%3A0xa758d37ec9535060!2sVivekananda%20School%2C%20Bagalur!5e0!3m2!1sen!2sin!4v1776089290921!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section id="cta" class="section-padding">
-        <div class="container cta-box reveal">
-            <h2>Experience the Future of Education</h2>
-            <p>Admissions for the Academic Session 2026-27 are currently open for Kindergarten to Grade IX & XI. Join the Vivekananda School family today!</p>
-            <div class="cta-btns">
-                <a href="admissions.html" class="btn btn-white">Apply Now</a>
-                <a href="contact.html" class="btn btn-outline-white">Visit Campus</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- 12. Footer -->
     <footer>
         <div class="container footer-grid">
-            <div class="footer-info">
+            <div class="footer-about">
                 <div class="logo">
-                     <span class="logo-name">Vivekananda School</span>
-                     <span class="logo-sub">Bagalur</span>
+                     <img src="Images/School Logo.png" alt="Logo" style="height: 60px;">
+                     <h3 style="color: white; margin-top: 10px;">Vivekananda School</h3>
                 </div>
-                <p>Nurturing curiosity, character, and lifelong learning with values since 1999.</p>
+                <p>Nurturing curiosity, character, and lifelong learning with values since 1999. The most trusted name in Bagalur education.</p>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/share/1Hv3sXMgvA/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/vivekananda_school_bagalur/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@vivekanandaschoolbagalur"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
+            
             <div class="footer-links">
                 <h3>Quick Links</h3>
                 <ul>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="admissions.html">Admissions</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                 </ul>
             </div>
+            
             <div class="footer-links">
-                <h3>Students & Parents</h3>
+                <h3>Our Campus</h3>
                 <ul>
-
-                    <li><a href="portal.html">Student Portal</a></li>
-                    <li><a href="portal.html">Parent Portal</a></li>
-                    <li><a href="contact.html">Careers</a></li>
+                    <li><a href="about.html#facilities">Facilities</a></li>
+                    <li><a href="gallery.html#events">Events</a></li>
+                    <li><a href="contact.html">Campus Visit</a></li>
+                    <li><a href="admissions.html#guide">Parent Guide</a></li>
                 </ul>
             </div>
-            <div class="footer-contact">
-                <h3>Contact Us</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Anna Nagar, Belathur (PO), Bagalur - 635124</p>
-                <p><i class="fas fa-phone"></i> +91 94439 40772</p>
-                <p><i class="fas fa-envelope"></i> info@vivekanandaschoolbagalur.com</p>
+            
+            <div class="footer-links">
+                <h3>Get In Touch</h3>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 10px;">Jogikalasanapalli, Bagalur, Tamil Nadu 635103</p>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 10px;">+91 94439 40772</p>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">vivekanandaschoolbagalur@gmail.com</p>
             </div>
         </div>
+        
         <div class="footer-bottom">
-            <p>&copy; 2026 Vivekananda School, Bagalur. All Rights Reserved. Built with <i class="fas fa-heart text-red"></i> for Excellence.</p>
+            <p>&copy; 2026 Vivekananda School, Bagalur. All Rights Reserved. Designed for Excellence.</p>
         </div>
     </footer>
 
-    <!-- Chatbot Toggle -->
-    <div id="chatbot-toggle" class="chat-btn">
-        <i class="fas fa-comment-dots"></i>
-    </div>
-
-    <!-- Scroll to Top -->
-    <a href="#" class="scroll-top">
-        <i class="fas fa-chevron-up"></i>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919443940772" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Scripts -->
     <script src="assets/js/main.js"></script>
 </body>
 </html>
