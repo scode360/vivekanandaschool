@@ -15,35 +15,6 @@
     <link rel="preload" as="image" href="Images/School Image.jpeg">
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        :root {
-            --primary: #1E3A8A;
-            --primary-light: #2563EB;
-            --secondary: #FACC15;
-            --white: #FFFFFF;
-            --gray-800: #1F2937;
-            --text-main: #1F2937;
-            --text-muted: #6B7280;
-            --radius-md: 1rem;
-            --radius-full: 9999px;
-            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
-        .container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 15px; }
-        @media (min-width: 769px) {
-            .container { padding: 0 40px; }
-        }
-        header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; padding: 10px 0; transition: var(--transition); }
-        @media (min-width: 769px) {
-            header { padding: 24px 0; }
-        }
-        .hero { height: 100vh; display: flex; align-items: center; position: relative; background: url('Images/School Image.jpeg') center/cover no-repeat; color: white; }
-        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(37, 99, 235, 0.7) 0%, rgba(96, 165, 250, 0.4) 100%); }
-        h1 { font-size: clamp(2.2rem, 8vw, 4.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
-        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 16px 36px; border-radius: var(--radius-full); font-weight: 600; text-decoration: none; transition: var(--transition); min-height: 48px; }
-        .btn-secondary { background: var(--secondary); color: var(--primary); }
-    </style>
     <!-- JSON-LD Schema Markup -->
     <script type="application/ld+json">
     {
@@ -80,21 +51,19 @@
                 </a>
             </div>
             
-            <nav class="nav-menu">
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="admissions.html">Admissions</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                    <button class="mobile-toggle" aria-label="Toggle Navigation">
-                        <i class="fas fa-bars"></i>
-                    </button>
-            </nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
 
             <div class="header-actions">
                 <a href="admissions.html" class="btn btn-secondary btn-sm">Apply Now</a>
+                <button class="mobile-toggle" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
