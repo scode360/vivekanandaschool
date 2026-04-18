@@ -43,26 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Portal Toggle Logic (if on portal page)
-    const portalButtons = document.querySelectorAll('.portal-toggle .btn');
-    if (portalButtons.length > 0) {
-        portalButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                portalButtons.forEach(b => {
-                    b.classList.remove('btn-primary');
-                    b.classList.add('btn-outline');
-                });
-                btn.classList.add('btn-primary');
-                btn.classList.remove('btn-outline');
-                
-                // Update placeholder based on mode
-                const usernameInput = document.getElementById('username');
-                if (usernameInput) {
-                    usernameInput.placeholder = btn.innerText === 'Student' ? 'Enter Registration ID' : 'Enter Registered Phone Number';
-                }
-            });
-        });
-    }
+
 
     // 3. Scroll Reveal Observer
     const revealElements = document.querySelectorAll('[data-reveal]');
