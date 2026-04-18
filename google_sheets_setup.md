@@ -80,7 +80,7 @@ function doPost(e) {
 - Copy the **Web App URL** (it should look like `https://script.google.com/macros/s/.../exec`).
 
 ## 5. Update Status
-- **Success!** I have already updated the `admissions.html` file with your URL: `https://script.google.com/macros/s/AKfycbyFl-WUpG8YAKgiz80Edi2xq82YNToTG6tyfvgEaOjsiB0J8nVox6_maWPf0lyNBdNq/exec`.
+- **Success!** I have already updated the `admissions.html` file with your URL: `https://script.google.com/macros/s/AKfycbwasfYKQQErOzYMsgVSdxaQrtDSGBDcY_zD9PO-25rtV20gM5boGlENZTxgAZx0du4Q/exec`.
 - You don't need to manually edit the file anymore.
 
 Your form is now live and will store data in your spreadsheet!

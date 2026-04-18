@@ -78,27 +78,33 @@
     <section class="section-padding bg-light" id="apply">
         <div class="container grid grid-2" style="align-items: center;">
             <div class="form-container card" data-reveal="fade-right" style="padding: 50px;">
-                <h2 style="margin-bottom: 30px;">Inquire for Admission</h2>
-                <form action="#" style="display: flex; flex-direction: column; gap: 20px;">
+                <h2 style="margin-bottom: 30px;">Online Admission Application</h2>
+                <form id="admissionForm" style="display: flex; flex-direction: column; gap: 20px;">
+                    <span style="font-weight: 600; color: var(--primary); font-size: 0.9rem; border-bottom: 1px solid var(--gray-200); padding-bottom: 5px;">Student Information</span>
                     <div class="form-row">
-                        <div style="flex: 1;">
-                            <label for="parent-name" class="visually-hidden">Parent Name</label>
-                            <input type="text" id="parent-name" placeholder="Parent Name" style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200);" required>
-                        </div>
-                        <div style="flex: 1;">
-                            <label for="email" class="visually-hidden">Email Address</label>
-                            <input type="email" id="email" placeholder="Email Address" style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200);" required>
+                        <div style="flex: 2;">
+                            <label for="studentName" class="visually-hidden">Student Full Name</label>
+                            <input type="text" id="studentName" name="studentName" placeholder="Student Full Name" style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200);" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div style="flex: 1;">
-                            <label for="phone" class="visually-hidden">Phone Number</label>
-                            <input type="tel" id="phone" placeholder="Phone Number" style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200);" required>
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" name="dob" style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200); background: white;" required>
                         </div>
                         <div style="flex: 1;">
-                            <label for="grade" class="visually-hidden">Select Grade Applying For</label>
-                            <select id="grade" style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200); background: white;" required>
-                                 <option value="">Select Grade Applying For</option>
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender" style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200); background: white;" required>
+                                <option value="">Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div style="flex: 1;">
+                            <label for="grade">Grade Applying For</label>
+                            <select id="grade" name="grade" style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200); background: white;" required>
+                                 <option value="">Select Grade</option>
                                  <option>Nursery / KG</option>
                                  <option>Primary School</option>
                                  <option>Middle School</option>
@@ -107,11 +113,77 @@
                             </select>
                         </div>
                     </div>
-                    <label for="message" class="visually-hidden">Your Message or Specific Inquiries</label>
-                    <textarea id="message" placeholder="Your Message or Specific Inquiries" rows="4" style="padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200); width: 100%;"></textarea>
-                    <button type="submit" class="btn btn-primary" style="align-self: flex-start; margin-top: 10px;">Submit Inquiry</button>
-                    <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">Our admissions team will contact you within 24 hours.</p>
+
+                    <span style="font-weight: 600; color: var(--primary); font-size: 0.9rem; border-bottom: 1px solid var(--gray-200); padding-bottom: 5px; margin-top: 10px;">Parent Information</span>
+                    <div class="form-row">
+                        <div style="flex: 1;">
+                            <input type="text" id="fatherName" name="fatherName" placeholder="Father's Name" style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200);" required>
+                        </div>
+                        <div style="flex: 1;">
+                            <input type="text" id="motherName" name="motherName" placeholder="Mother's Name" style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200);" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div style="flex: 1;">
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number" style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200);" required>
+                        </div>
+                        <div style="flex: 1;">
+                            <input type="email" id="email" name="email" placeholder="Email Address" style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200);" required>
+                        </div>
+                    </div>
+                    <textarea id="address" name="address" placeholder="Residential Address" rows="3" style="padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200); width: 100%;" required></textarea>
+                    
+                    <button type="submit" id="submitBtn" class="btn btn-primary" style="align-self: flex-start; margin-top: 10px;">Submit Application</button>
+                    <div id="formStatus" style="margin-top: 15px; display: none; padding: 15px; border-radius: 8px;"></div>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">Your data is securely stored in our admissions database.</p>
                 </form>
+
+                <script>
+                    document.getElementById('admissionForm').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        const btn = document.getElementById('submitBtn');
+                        const status = document.getElementById('formStatus');
+                        const scriptUrl = 'https://script.google.com/macros/s/AKfycbwasfYKQQErOzYMsgVSdxaQrtDSGBDcY_zD9PO-25rtV20gM5boGlENZTxgAZx0du4Q/exec';
+
+                        btn.disabled = true;
+                        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+                        
+                        const formData = {
+                            studentName: document.getElementById('studentName').value,
+                            dob: document.getElementById('dob').value,
+                            gender: document.getElementById('gender').value,
+                            grade: document.getElementById('grade').value,
+                            fatherName: document.getElementById('fatherName').value,
+                            motherName: document.getElementById('motherName').value,
+                            phone: document.getElementById('phone').value,
+                            email: document.getElementById('email').value,
+                            address: document.getElementById('address').value
+                        };
+
+                        fetch(scriptUrl, {
+                            method: 'POST',
+                            mode: 'no-cors',
+                            cache: 'no-cache',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(formData)
+                        })
+                        .then(() => {
+                            // Show Success Modal
+                            document.getElementById('successModal').classList.add('active');
+                            btn.style.display = 'none';
+                            document.getElementById('admissionForm').reset();
+                        })
+                        .catch(err => {
+                            console.error(err);
+                            status.style.display = 'block';
+                            status.style.backgroundColor = '#FEE2E2';
+                            status.style.color = '#991B1B';
+                            status.innerHTML = '❌ Error: Could not submit application. Please try again or contact us directly.';
+                            btn.disabled = false;
+                            btn.innerText = 'Retry Submission';
+                        });
+                    });
+                </script>
             </div>
             <div class="info-content" data-reveal="fade-left">
                  <span class="section-subtitle">Parent Guide</span>
@@ -188,6 +260,18 @@
             <p>&copy; 2026 Vivekananda School, Bagalur.</p>
         </div>
     </footer>
+
+    <!-- Success Modal -->
+    <div class="modal-backdrop" id="successModal">
+        <div class="modal-content">
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h2>Successfully Submitted!</h2>
+            <p>Thank you for choosing Vivekananda School. Your child's admission application has been received and saved to our database. Our team will contact you shortly for the next steps.</p>
+            <button class="btn btn-primary" onclick="document.getElementById('successModal').classList.remove('active'); location.reload();">Close & Return</button>
+        </div>
+    </div>
 
     <script src="assets/js/main.js" defer></script>
 </body>
