@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admissions 2026-27 | Vivekananda School | Apply Now</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome - Load asynchronously -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="icon" type="image/png" href="Images/School Logo.png">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -15,7 +17,7 @@
         <div class="container header-container">
             <div class="logo">
                 <a href="index.html" class="logo-link">
-                    <img src="Images/School Logo.png" alt="Logo" class="logo-img">
+                    <img src="Images/School Logo.png" alt="Vivekananda School Logo" class="logo-img" width="70" height="70">
                     <div class="logo-text">
                         <span class="logo-name">Vivekananda School</span>
                         <span class="logo-sub">Bagalur • Excellence Since 1999</span>
@@ -29,7 +31,7 @@
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+            <button class="mobile-toggle" aria-label="Toggle Navigation"><i class="fas fa-bars"></i></button>
         </div>
     </header>
 
@@ -75,22 +77,35 @@
                 <h2 style="margin-bottom: 30px;">Inquire for Admission</h2>
                 <form action="#" style="display: flex; flex-direction: column; gap: 20px;">
                     <div style="display: flex; gap: 20px;">
-                        <input type="text" placeholder="Parent Name" style="flex: 1; padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200);">
-                        <input type="email" placeholder="Email Address" style="flex: 1; padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200);">
+                        <div style="flex: 1;">
+                            <label for="parent-name" class="visually-hidden">Parent Name</label>
+                            <input type="text" id="parent-name" placeholder="Parent Name" style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200);" required>
+                        </div>
+                        <div style="flex: 1;">
+                            <label for="email" class="visually-hidden">Email Address</label>
+                            <input type="email" id="email" placeholder="Email Address" style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200);" required>
+                        </div>
                     </div>
                     <div style="display: flex; gap: 20px;">
-                        <input type="tel" placeholder="Phone Number" style="flex: 1; padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200);">
-                        <select style="flex: 1; padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200); background: white;">
-                             <option>Select Grade Applying For</option>
-                             <option>Nursery / KG</option>
-                             <option>Primary School</option>
-                             <option>Middle School</option>
-                             <option>Secondary School</option>
-                             <option>Higher Secondary</option>
-                        </select>
+                        <div style="flex: 1;">
+                            <label for="phone" class="visually-hidden">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="Phone Number" style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200);" required>
+                        </div>
+                        <div style="flex: 1;">
+                            <label for="grade" class="visually-hidden">Select Grade Applying For</label>
+                            <select id="grade" style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200); background: white;" required>
+                                 <option value="">Select Grade Applying For</option>
+                                 <option>Nursery / KG</option>
+                                 <option>Primary School</option>
+                                 <option>Middle School</option>
+                                 <option>Secondary School</option>
+                                 <option>Higher Secondary</option>
+                            </select>
+                        </div>
                     </div>
-                    <textarea placeholder="Your Message or Specific Inquiries" rows="4" style="padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200); width: 100%;"></textarea>
-                    <button type="button" class="btn btn-primary" style="align-self: flex-start; margin-top: 10px;">Submit Inquiry</button>
+                    <label for="message" class="visually-hidden">Your Message or Specific Inquiries</label>
+                    <textarea id="message" placeholder="Your Message or Specific Inquiries" rows="4" style="padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200); width: 100%;"></textarea>
+                    <button type="submit" class="btn btn-primary" style="align-self: flex-start; margin-top: 10px;">Submit Inquiry</button>
                     <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">Our admissions team will contact you within 24 hours.</p>
                 </form>
             </div>
@@ -151,12 +166,12 @@
     <footer>
         <div class="container footer-grid">
             <div class="footer-about">
-                <img src="Images/School Logo.png" alt="Logo" style="height: 60px;">
+                <img src="Images/School Logo.png" alt="Vivekananda School Logo" style="height: 60px;" width="60" height="60" loading="lazy">
                 <p>Nurturing future leaders in a high-quality environment.</p>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/share/1Hv3sXMgvA/"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/vivekananda_school_bagalur/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/@vivekanandaschoolbagalur"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/share/1Hv3sXMgvA/" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/vivekananda_school_bagalur/" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/@vivekanandaschoolbagalur" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="footer-links">
@@ -170,6 +185,6 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 </html>

@@ -2,16 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vivekananda School | Shaping Future Leaders with Care & Excellence</title>
     <!-- SEO Meta Tags -->
     <meta name="description" content="Vivekananda School, Bagalur - Providing a safe, high-quality, value-based education for children seeking holistic development and academic excellence.">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome - Load asynchronously -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="Images/School Logo.png">
+    <!-- Preload Hero Image -->
+    <link rel="preload" as="image" href="Images/School Image.jpeg">
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        :root {
+            --primary: #1E3A8A;
+            --primary-light: #2563EB;
+            --secondary: #FACC15;
+            --white: #FFFFFF;
+            --gray-800: #1F2937;
+            --text-main: #1F2937;
+            --text-muted: #6B7280;
+            --radius-md: 1rem;
+            --radius-full: 9999px;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
+        .container { width: 96%; max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+        header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; padding: 24px 0; transition: var(--transition); }
+        .hero { height: 100vh; min-height: 700px; display: flex; align-items: center; position: relative; background: #1E3A8A; color: white; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(30, 58, 138, 0.85) 0%, rgba(30, 58, 138, 0.4) 100%); }
+        h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 24px; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 16px 36px; border-radius: var(--radius-full); font-weight: 600; text-decoration: none; transition: var(--transition); min-height: 48px; }
+        .btn-secondary { background: var(--secondary); color: var(--primary); }
+    </style>
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "School",
+      "name": "Vivekananda School",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bagalur, RVRH+7JW, Jogikalasanapalli",
+        "addressLocality": "Bagalur",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "635103",
+        "addressCountry": "IN"
+      },
+      "telePhone": "+91 94439 40772",
+      "url": "https://swamyviv.com/",
+      "logo": "https://swamyviv.com/Images/School%20Logo.png",
+      "foundingDate": "1999"
+    }
+    </script>
 </head>
 <body>
 
@@ -20,7 +66,7 @@
         <div class="container header-container">
             <div class="logo">
                 <a href="index.html" class="logo-link">
-                    <img src="Images/School Logo.png" alt="Vivekananda School Logo" class="logo-img">
+                    <img src="Images/School Logo.png" alt="Vivekananda School Logo" class="logo-img" width="70" height="70">
                     <div class="logo-text">
                         <span class="logo-name">Vivekananda School</span>
                         <span class="logo-sub">Bagalur • Excellence Since 1999</span>
@@ -36,9 +82,9 @@
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-                <div class="mobile-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
+                    <button class="mobile-toggle" aria-label="Toggle Navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
             </nav>
 
             <div class="header-actions">
@@ -88,7 +134,7 @@
     <section class="section-padding" id="about">
         <div class="container academics-grid">
             <div class="image-box" data-reveal="fade-right">
-                <img src="Images/School Image.jpeg" alt="School Campus" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);">
+                <img src="Images/School Image.jpeg" alt="Vivekananda School Campus - Traditional building with modern facilities" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);" width="800" height="600" fetchpriority="high">
             </div>
             <div class="academics-content" data-reveal="fade-left">
                 <span class="section-subtitle">Since 1999</span>
@@ -176,7 +222,7 @@
                 <a href="admissions.html" class="btn btn-primary">Admissions Open 2026-27</a>
             </div>
             <div class="image-box" data-reveal="fade-left">
-                <img src="Images/Trip/Achivement.jpeg" alt="Academic Awards" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);">
+                <img src="Images/Trip/Achivement.jpeg" alt="Students receiving academic awards for excellence" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);" loading="lazy" width="800" height="600">
             </div>
         </div>
     </section>
@@ -189,42 +235,42 @@
             
             <div class="facilities-grid" style="margin-top: 50px;">
                 <div class="facility-item" data-reveal="fade-up">
-                    <img src="Images/Trip/Awareness3.jpeg" alt="Smart Classroom">
+                    <img src="Images/Trip/Awareness3.jpeg" alt="Students learning in a modern smart classroom" loading="lazy" width="400" height="300">
                     <div class="facility-overlay">
                         <h3>Smart Classrooms</h3>
                         <p>Digital learning tools in every room.</p>
                     </div>
                 </div>
                 <div class="facility-item" data-reveal="fade-up" style="transition-delay: 0.1s;">
-                    <img src="Images/Trip/sport2.jpeg" alt="Playground">
+                    <img src="Images/Trip/sport2.jpeg" alt="School playground and sports facilities" loading="lazy" width="400" height="300">
                     <div class="facility-overlay">
                         <h3>Sports & Playground</h3>
                         <p>Promoting physical health and teamwork.</p>
                     </div>
                 </div>
                 <div class="facility-item" data-reveal="fade-up" style="transition-delay: 0.2s;">
-                    <img src="Images/Trip/trip1.jpeg" alt="Science Lab" style="object-position: center;">
+                    <img src="Images/Trip/trip1.jpeg" alt="Science laboratory with modern equipment" style="object-position: center;" loading="lazy" width="400" height="300">
                     <div class="facility-overlay">
                         <h3>Modern Labs</h3>
                         <p>Fully equipped Science and Computer labs.</p>
                     </div>
                 </div>
                 <div class="facility-item" data-reveal="fade-up" style="transition-delay: 0.3s;">
-                    <img src="Images/Trip/trip1.jpeg" alt="Library">
+                    <img src="Images/Trip/trip1.jpeg" alt="Well-stocked school library" loading="lazy" width="400" height="300">
                     <div class="facility-overlay">
                         <h3>Resourceful Library</h3>
                         <p>A vast collection of learning materials.</p>
                     </div>
                 </div>
                 <div class="facility-item" data-reveal="fade-up" style="transition-delay: 0.4s;">
-                    <img src="Images/Trip/trip6.jpeg" alt="Transport">
+                    <img src="Images/Trip/trip6.jpeg" alt="GPS-tracked school bus for safe transport" loading="lazy" width="400" height="300">
                     <div class="facility-overlay">
                         <h3>Safe Transport</h3>
                         <p>Connected, safe, and comfortable buses.</p>
                     </div>
                 </div>
                 <div class="facility-item" data-reveal="fade-up" style="transition-delay: 0.5s;">
-                    <img src="Images/Trip/Awareness2.jpeg" alt="Auditorium">
+                    <img src="Images/Trip/Awareness2.jpeg" alt="School auditorium for events and performances" loading="lazy" width="400" height="300">
                     <div class="facility-overlay">
                         <h3>Auditorium</h3>
                         <p>Space for creativity and community events.</p>
@@ -260,10 +306,10 @@
         <div class="container text-center">
             <span class="section-subtitle">Experience our Campus</span>
             <h2 class="section-title">Traditional Day & Food Festival - 2025</h2>
-            <div id="video-placeholder" style="margin-top: 40px; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-xl); aspect-ratio: 16/9; background: #000; cursor: pointer;" onclick="this.innerHTML = '<iframe width=\'100%\' height=\'100%\' src=\'https://www.youtube.com/embed/_tS2bRV2Il8?autoplay=1\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'">
-                 <img src="https://img.youtube.com/vi/_tS2bRV2Il8/maxresdefault.jpg" alt="Traditional Day & Food Festival 2025" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;">
+            <div id="video-placeholder" style="margin-top: 40px; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-xl); aspect-ratio: 16/9; background: #000; cursor: pointer;" onclick="this.innerHTML = '<iframe width=\'100%\' height=\'100%\' src=\'https://www.youtube.com/embed/_tS2bRV2Il8?autoplay=1\' title=\'Traditional Day & Food Festival 2025 Video\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'" role="button" aria-label="Play Traditional Day & Food Festival 2025 Video">
+                 <img src="https://img.youtube.com/vi/_tS2bRV2Il8/maxresdefault.jpg" alt="Thumbnail for Traditional Day & Food Festival 2025" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;" loading="lazy" width="1280" height="720">
                  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90px; height: 90px; background: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--primary); box-shadow: 0 10px 25px rgba(0,0,0,0.3); transition: var(--transition);">
-                     <i class="fas fa-play"></i>
+                     <i class="fas fa-play" aria-hidden="true"></i>
                  </div>
             </div>
         </div>
@@ -369,14 +415,14 @@
         <div class="container footer-grid">
             <div class="footer-about">
                 <div class="logo">
-                     <img src="Images/School Logo.png" alt="Logo" style="height: 60px;">
-                     <h3 style="color: white; margin-top: 10px;">Vivekananda School</h3>
+                      <img src="Images/School Logo.png" alt="Vivekananda School Logo" style="height: 60px;" width="60" height="60" loading="lazy">
+                      <h3 style="color: white; margin-top: 10px;">Vivekananda School</h3>
                 </div>
                 <p>Nurturing curiosity, character, and lifelong learning with values since 1999. The most trusted name in Bagalur education.</p>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/share/1Hv3sXMgvA/"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/vivekananda_school_bagalur/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/@vivekanandaschoolbagalur"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/share/1Hv3sXMgvA/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/vivekananda_school_bagalur/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@vivekanandaschoolbagalur" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             
@@ -414,10 +460,10 @@
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919443940772" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/919443940772" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 </html>

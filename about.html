@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Vivekananda School | Excellence Since 1999</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome - Load asynchronously -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="icon" type="image/png" href="Images/School Logo.png">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -15,7 +17,7 @@
         <div class="container header-container">
             <div class="logo">
                 <a href="index.html" class="logo-link">
-                    <img src="Images/School Logo.png" alt="Logo" class="logo-img">
+                    <img src="Images/School Logo.png" alt="Vivekananda School Logo" class="logo-img" width="70" height="70">
                     <div class="logo-text">
                         <span class="logo-name">Vivekananda School</span>
                         <span class="logo-sub">Bagalur • Excellence Since 1999</span>
@@ -29,7 +31,7 @@
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+            <button class="mobile-toggle" aria-label="Toggle Navigation"><i class="fas fa-bars"></i></button>
         </div>
     </header>
 
@@ -46,7 +48,7 @@
     <section class="section-padding">
         <div class="container grid grid-2" style="align-items: center;">
             <div class="image-box" data-reveal="fade-right">
-                <img src="Images/Trip/Awareness1.jpeg" alt="School Values" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-premium);">
+                <img src="Images/Trip/Awareness1.jpeg" alt="Students participating in awareness program" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-premium);" width="800" height="600" loading="lazy">
             </div>
             <div class="content-box" data-reveal="fade-left">
                 <span class="section-subtitle">Our Purpose</span>
@@ -73,19 +75,19 @@
             <h2 class="section-title">Dedicated to Educational Innovation</h2>
             <div class="grid grid-3" style="margin-top: 50px;">
                 <div class="card icon-card" data-reveal="fade-up">
-                    <img src="Images/Thejas G ( correspondent ).jpeg" alt="Correspondent" style="width: 140px; height: 140px; border-radius: 50%; border: 5px solid var(--white); box-shadow: var(--shadow-md); object-fit: cover;">
+                    <img src="Images/Thejas G ( correspondent ).jpeg" alt="Mr. Thejas G, Correspondent of Vivekananda School" style="width: 140px; height: 140px; border-radius: 50%; border: 5px solid var(--white); box-shadow: var(--shadow-md); object-fit: cover;" width="140" height="140" loading="lazy">
                     <h3>Mr. Thejas G</h3>
                     <span style="color: var(--primary-light); font-weight: 600;">Correspondent</span>
                     <p style="font-size: 0.9rem; font-style: italic;">"Nurturing every child with traditional values and a modern vision for global success."</p>
                 </div>
                 <div class="card icon-card" data-reveal="fade-up" style="transition-delay: 0.1s;">
-                    <img src="Images/Micheal Raj S ( Principal) M.Sc,B.ed.jpeg" alt="Principal" style="width: 140px; height: 140px; border-radius: 50%; border: 5px solid var(--white); box-shadow: var(--shadow-md); object-fit: cover;">
+                    <img src="Images/Micheal Raj S ( Principal) M.Sc,B.ed.jpeg" alt="Mr. Micheal Raj S, Principal of Vivekananda School" style="width: 140px; height: 140px; border-radius: 50%; border: 5px solid var(--white); box-shadow: var(--shadow-md); object-fit: cover;" width="140" height="140" loading="lazy">
                     <h3>Mr. Micheal Raj S</h3>
                     <span style="color: var(--primary-light); font-weight: 600;">Principal, M.Sc, B.Ed.</span>
                     <p style="font-size: 0.9rem; font-style: italic;">"Our focus is beyond academics—we build character and curiosity in every grade."</p>
                 </div>
                 <div class="card icon-card" data-reveal="fade-up" style="transition-delay: 0.2s;">
-                    <img src="Images/Padmini K R( Vice Principal) M.A, B.ed.jpeg" alt="Vice Principal" style="width: 140px; height: 140px; border-radius: 50%; border: 5px solid var(--white); box-shadow: var(--shadow-md); object-fit: cover;">
+                    <img src="Images/Padmini K R( Vice Principal) M.A, B.ed.jpeg" alt="Mrs. Padmini K R, Vice Principal of Vivekananda School" style="width: 140px; height: 140px; border-radius: 50%; border: 5px solid var(--white); box-shadow: var(--shadow-md); object-fit: cover;" width="140" height="140" loading="lazy">
                     <h3>Mrs. Padmini K R</h3>
                     <span style="color: var(--primary-light); font-weight: 600;">Vice Principal, M.A, B.Ed.</span>
                     <p style="font-size: 0.9rem; font-style: italic;">"Creating a safe, disciplined, and nurturing environment for holistic growth."</p>
@@ -100,9 +102,9 @@
              <span class="section-subtitle">Beyond Academics</span>
              <h2 class="section-title">Holistic Development in Practice</h2>
              <div class="grid grid-3" style="margin-top: 40px;">
-                <img src="Images/Trip/Awareness2.jpeg" alt="Awareness Program" style="border-radius: var(--radius-md); width: 100%; aspect-ratio: 4/3; object-fit: cover;">
-                <img src="Images/Trip/sport1.jpeg" alt="Sports events" style="border-radius: var(--radius-md); width: 100%; aspect-ratio: 4/3; object-fit: cover;">
-                <img src="Images/Trip/Awareness3.jpeg" alt="Activities" style="border-radius: var(--radius-md); width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+                <img src="Images/Trip/Awareness2.jpeg" alt="Community awareness program conducted by school" style="border-radius: var(--radius-md); width: 100%; aspect-ratio: 4/3; object-fit: cover;" width="400" height="300" loading="lazy">
+                <img src="Images/Trip/sport1.jpeg" alt="Students competing in school sports day events" style="border-radius: var(--radius-md); width: 100%; aspect-ratio: 4/3; object-fit: cover;" width="400" height="300" loading="lazy">
+                <img src="Images/Trip/Awareness3.jpeg" alt="Interactive classroom activity sessions" style="border-radius: var(--radius-md); width: 100%; aspect-ratio: 4/3; object-fit: cover;" width="400" height="300" loading="lazy">
              </div>
              <div style="margin-top: 50px;">
                 <a href="gallery.html" class="btn btn-outline">Explore More in Gallery <i class="fas fa-arrow-right" style="margin-left: 10px;"></i></a>
@@ -114,12 +116,12 @@
     <footer>
         <div class="container footer-grid">
             <div class="footer-about">
-                <img src="Images/School Logo.png" alt="Logo" style="height: 60px;">
+                <img src="Images/School Logo.png" alt="Vivekananda School Logo" style="height: 60px;" width="60" height="60" loading="lazy">
                 <p>The most trusted name in Bagalur education since 1999.</p>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/share/1Hv3sXMgvA/"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/vivekananda_school_bagalur/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/@vivekanandaschoolbagalur"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/share/1Hv3sXMgvA/" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/vivekananda_school_bagalur/" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/@vivekanandaschoolbagalur" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="footer-links">
@@ -142,6 +144,6 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 </html>

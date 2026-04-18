@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery | Vivekananda School | Our Vibrant Campus Life</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome - Load asynchronously -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="icon" type="image/png" href="Images/School Logo.png">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -15,7 +17,7 @@
         <div class="container header-container">
             <div class="logo">
                 <a href="index.html" class="logo-link">
-                    <img src="Images/School Logo.png" alt="Logo" class="logo-img">
+                    <img src="Images/School Logo.png" alt="Vivekananda School Logo" class="logo-img" width="70" height="70">
                     <div class="logo-text">
                         <span class="logo-name">Vivekananda School</span>
                         <span class="logo-sub">Bagalur • Excellence Since 1999</span>
@@ -29,7 +31,7 @@
                 <li><a href="gallery.html" class="active">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+            <button class="mobile-toggle" aria-label="Toggle Navigation"><i class="fas fa-bars"></i></button>
         </div>
     </header>
 
@@ -53,40 +55,40 @@
             
             <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;">
                 <div class="gallery-item" data-reveal="fade-up">
-                    <img src="Images/School Image.jpeg" alt="Campus View">
+                    <img src="Images/School Image.jpeg" alt="Scenic view of Vivekananda School Campus" width="400" height="400" loading="lazy">
                 </div>
                 <div class="gallery-item" data-reveal="fade-up" style="transition-delay: 0.1s;">
-                    <img src="Images/campus_life.jpg" alt="Science Laboratory">
+                    <img src="Images/Admission-1.jpeg" alt="Students engaging in campus life activities" width="400" height="400" loading="lazy">
                 </div>
                 <div class="gallery-item" data-reveal="fade-up" style="transition-delay: 0.2s;">
-                    <img src="Images/admissions_bg.jpg" alt="School Architecture">
+                    <img src="Images/Admission-2.jpeg" alt="Modern school architecture and learning spaces" width="400" height="400" loading="lazy">
                 </div>
                 <div class="gallery-item" data-reveal="fade-up" style="transition-delay: 0.1s;">
-                    <img src="Images/Trip/Awareness1.jpeg" alt="Academic Event">
+                    <img src="Images/Trip/Awareness1.jpeg" alt="Students participating in an academic event" width="400" height="400" loading="lazy">
                 </div>
                 <div class="gallery-item" data-reveal="fade-up" style="transition-delay: 0.2s;">
-                    <img src="Images/Trip/Awareness2.jpeg" alt="Leadership Talk">
+                    <img src="Images/Trip/Awareness2.jpeg" alt="Leadership talk conducted at the school auditorium" width="400" height="400" loading="lazy">
                 </div>
                 <div class="gallery-item" data-reveal="fade-up" style="transition-delay: 0.3s;">
-                    <img src="Images/Trip/Awareness3.jpeg" alt="Class Activities">
+                    <img src="Images/Trip/Awareness3.jpeg" alt="Interactive classroom activities with students" width="400" height="400" loading="lazy">
                 </div>
                 <div class="gallery-item" data-reveal="fade-up" style="transition-delay: 0.1s;">
-                    <img src="Images/Trip/sport1.jpeg" alt="Sports Awards">
+                    <img src="Images/Trip/sport1.jpeg" alt="Students receiving awards on sports day" width="400" height="400" loading="lazy">
                 </div>
                 <div class="gallery-item" data-reveal="fade-up" style="transition-delay: 0.2s;">
-                    <img src="Images/Trip/sport2.jpeg" alt="Playfield Activity">
+                    <img src="Images/Trip/sport2.jpeg" alt="Outdoor sports and playfield activities" width="400" height="400" loading="lazy">
                 </div>
                 <div class="gallery-item" data-reveal="fade-up" style="transition-delay: 0.3s;">
-                    <img src="Images/Trip/trip6.jpeg" alt="School Bus Fleet">
+                    <img src="Images/Trip/trip6.jpeg" alt="School bus fleet ensuring safe transport" width="400" height="400" loading="lazy">
                 </div>
                 <div class="gallery-item" data-reveal="fade-up" style="transition-delay: 0.1s;">
-                    <img src="Images/Trip/trip1.jpeg" alt="Library">
+                    <img src="Images/Trip/trip1.jpeg" alt="Students reading and studying in the school library" width="400" height="400" loading="lazy">
                 </div>
                 <div class="gallery-item" data-reveal="fade-up" style="transition-delay: 0.2s;">
-                    <img src="Images/Trip/trip4.jpeg" alt="Excursions">
+                    <img src="Images/Trip/trip4.jpeg" alt="Students on an educational school excursion" width="400" height="400" loading="lazy">
                 </div>
                 <div class="gallery-item" data-reveal="fade-up" style="transition-delay: 0.3s;">
-                    <img src="Images/Trip/trip10.jpeg" alt="Team Outing">
+                    <img src="Images/Trip/trip10.jpeg" alt="Team outing and community building events" width="400" height="400" loading="lazy">
                 </div>
             </div>
         </div>
@@ -104,7 +106,7 @@
                 </div>
             </div>
             <div class="image-box" data-reveal="fade-left">
-                <img src="Images/Trip/sport1.jpeg" alt="Awards" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+                <img src="Images/Trip/sport1.jpeg" alt="Students celebrating their achievements with awards" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);" width="600" height="450" loading="lazy">
             </div>
         </div>
     </section>
@@ -113,12 +115,12 @@
     <footer>
         <div class="container footer-grid">
             <div class="footer-about">
-                <img src="Images/School Logo.png" alt="Logo" style="height: 60px;">
+                <img src="Images/School Logo.png" alt="Vivekananda School Logo" style="height: 60px;" width="60" height="60" loading="lazy">
                 <p>Nurturing curiosity since 1999.</p>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/share/1Hv3sXMgvA/"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/vivekananda_school_bagalur/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/@vivekanandaschoolbagalur"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/share/1Hv3sXMgvA/" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/vivekananda_school_bagalur/" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/@vivekanandaschoolbagalur" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="footer-links">
@@ -131,6 +133,6 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 </html>

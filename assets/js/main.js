@@ -4,48 +4,63 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. Header Scroll Effect
+    // 1. Header Scroll Effect - Optimized with requestAnimationFrame
     const header = document.querySelector('header');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 80) {
+    let scrollPos = 0;
+    let ticking = false;
+
+    function updateHeader() {
+        if (scrollPos > 80) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
-    });
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        scrollPos = window.scrollY;
+        if (!ticking) {
+            window.requestAnimationFrame(updateHeader);
+            ticking = true;
+        }
+    }, { passive: true });
 
     // 2. Mobile Menu Toggle
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navLinks = document.querySelector('.nav-links');
 
-    if (mobileToggle) {
+    if (mobileToggle && navLinks) {
         mobileToggle.addEventListener('click', () => {
             const icon = mobileToggle.querySelector('i');
             navLinks.classList.toggle('active');
             
             if (navLinks.classList.contains('active')) {
                 icon.classList.replace('fa-bars', 'fa-times');
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '100%';
-                navLinks.style.left = '0';
-                navLinks.style.width = '100%';
-                navLinks.style.background = 'white';
-                navLinks.style.padding = '40px';
-                navLinks.style.boxShadow = '0 10px 15px rgba(0,0,0,0.1)';
-                
-                // Styles for mobile links
-                navLinks.querySelectorAll('a').forEach(a => {
-                    a.style.color = '#1E3A8A';
-                    a.style.fontSize = '1.2rem';
-                    a.style.textAlign = 'center';
-                });
             } else {
                 icon.classList.replace('fa-times', 'fa-bars');
-                navLinks.style.display = '';
             }
+        });
+    }
+
+    // Portal Toggle Logic (if on portal page)
+    const portalButtons = document.querySelectorAll('.portal-toggle .btn');
+    if (portalButtons.length > 0) {
+        portalButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                portalButtons.forEach(b => {
+                    b.classList.remove('btn-primary');
+                    b.classList.add('btn-outline');
+                });
+                btn.classList.add('btn-primary');
+                btn.classList.remove('btn-outline');
+                
+                // Update placeholder based on mode
+                const usernameInput = document.getElementById('username');
+                if (usernameInput) {
+                    usernameInput.placeholder = btn.innerText === 'Student' ? 'Enter Registration ID' : 'Enter Registered Phone Number';
+                }
+            });
         });
     }
 
@@ -93,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 counterObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.8 });
+    }, { threshold: 0.2 }); // Trigger earlier for better UX
 
     counterElements.forEach(el => counterObserver.observe(el));
 
@@ -111,8 +126,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     behavior: 'smooth'
                 });
                 // Close menu if mobile
-                if (navLinks.classList.contains('active')) {
-                    mobileToggle.click();
+                if (navLinks && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    const icon = mobileToggle.querySelector('i');
+                    if (icon) icon.classList.replace('fa-times', 'fa-bars');
                 }
             }
         });

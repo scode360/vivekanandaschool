@@ -7,10 +7,11 @@
     <meta name="description" content="A comprehensive guide for parents and users of Vivekananda School, Bagalur. Learn how to navigate our site, apply for admissions, and use the portal.">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome - Load asynchronously -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="Images/School Logo.png" type="image/png">
     <!-- Animate.css -->
@@ -23,7 +24,7 @@
         <div class="container header-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="Images/School Logo.png" alt="Vivekananda School Logo" class="logo-img">
+                    <img src="Images/School Logo.png" alt="Vivekananda School Logo" class="logo-img" width="70" height="70">
                     <div class="logo-text">
                         <span class="logo-name">Vivekananda School</span>
                         <span class="logo-sub">Bagalur</span>
@@ -32,7 +33,7 @@
             </div>
             
             <nav class="nav-menu" id="nav-menu">
-                <ul>
+                <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="admissions.html">Admissions</a></li>
@@ -44,7 +45,7 @@
 
             <div class="header-actions">
                 <a href="admissions.html" class="btn btn-primary">Apply Now</a>
-                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -135,10 +136,9 @@
                 </div>
                 <p>Nurturing curiosity, character, and lifelong learning with values since 1999.</p>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/vivekananda_school_bagalur/"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.youtube.com/@vivekanandaschoolbagalur"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/share/1Hv3sXMgvA/" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/vivekananda_school_bagalur/" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/@vivekanandaschoolbagalur" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="footer-links">
@@ -163,6 +163,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.min.js" defer></script>
 </body>
 </html>
