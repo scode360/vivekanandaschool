@@ -377,7 +377,8 @@ header.scrolled .mobile-toggle { color: var(--primary); }
     
     .mobile-toggle { display: block; }
 
-    .header-actions { display: none; }
+    .header-actions .btn { display: none; }
+    .header-actions { display: flex; align-items: center; }
 
     @keyframes slideDown {
         from { opacity: 0; transform: translateY(-10px); }
