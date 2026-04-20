@@ -29,7 +29,6 @@
                 <li><a href="about.html" class="active">About Us</a></li>
                 <li><a href="admissions.html">Admissions</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="guide.html">Guide</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="header-actions">
@@ -43,8 +42,8 @@
     <section class="hero" style="background: url('Images/School Image.jpeg') center/cover;">
         <div class="hero-overlay"></div>
         <div class="container">
-            <h1 data-reveal="fade-up">About Our School</h1>
-            <p data-reveal="fade-up" style="transition-delay: 0.2s;">Discover the values, mission, and leadership shaping the future leaders at Bagalur.</p>
+            <h1 data-reveal="fade-up" class="revealed">About Our School</h1>
+            <p data-reveal="fade-up" style="transition-delay: 0.2s;" class="revealed">Discover the values, mission, and leadership shaping the future leaders at Bagalur.</p>
         </div>
     </section>
 
@@ -106,9 +105,18 @@
              <span class="section-subtitle">Beyond Academics</span>
              <h2 class="section-title">Holistic Development in Practice</h2>
              <div class="grid grid-3" style="margin-top: 40px;">
-                <img src="Images/Trip/Awareness2.jpeg" alt="Community awareness program conducted by school" style="border-radius: var(--radius-md); width: 100%; aspect-ratio: 4/3; object-fit: cover;" width="400" height="300" loading="lazy">
-                <img src="Images/Trip/sport1.jpeg" alt="Students competing in school sports day events" style="border-radius: var(--radius-md); width: 100%; aspect-ratio: 4/3; object-fit: cover;" width="400" height="300" loading="lazy">
-                <img src="Images/Trip/Awareness3.jpeg" alt="Interactive classroom activity sessions" style="border-radius: var(--radius-md); width: 100%; aspect-ratio: 4/3; object-fit: cover;" width="400" height="300" loading="lazy">
+                <div class="gallery-item" data-reveal="fade-up">
+                    <img src="Images/Trip/Awareness2.jpeg" alt="Community awareness program conducted by school" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;" width="400" height="300" loading="lazy">
+                    <div class="gallery-overlay">Awareness Programs</div>
+                </div>
+                <div class="gallery-item" data-reveal="fade-up" style="transition-delay: 0.1s;">
+                    <img src="Images/Trip/sport1.jpeg" alt="Students competing in school sports day events" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;" width="400" height="300" loading="lazy">
+                    <div class="gallery-overlay">Sports Excellence</div>
+                </div>
+                <div class="gallery-item" data-reveal="fade-up" style="transition-delay: 0.2s;">
+                    <img src="Images/Trip/Awareness3.jpeg" alt="Interactive classroom activity sessions" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;" width="400" height="300" loading="lazy">
+                    <div class="gallery-overlay">Interactive Learning</div>
+                </div>
              </div>
              <div style="margin-top: 40px;">
                 <a href="gallery.html" class="btn btn-outline">Explore More in Gallery <i class="fas fa-arrow-right" style="margin-left: 10px;"></i></a>
@@ -144,7 +152,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Vivekananda School, Bagalur.</p>
+            <p>&copy; 2026 Vivekananda School, Bagalur. | Designed by <a href="https://scode360.in" target="_blank" style="color: var(--secondary); text-decoration: none; font-weight: 600;">SCODE360</a></p>
         </div>
     </footer>
 

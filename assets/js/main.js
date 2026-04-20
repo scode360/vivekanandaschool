@@ -115,4 +115,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 6. Image Overlay Click/Tap Handler for Mobile
+    const overlayItems = document.querySelectorAll('.facility-item, .gallery-item');
+    
+    overlayItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            // If it's a mobile device (or touch-based)
+            if (window.innerWidth <= 1024) {
+                // Remove clicked class from all other items first
+                overlayItems.forEach(other => {
+                    if (other !== item) other.classList.remove('clicked');
+                });
+                // Toggle clicked class on current item
+                this.classList.toggle('clicked');
+            }
+        });
+    });
 });
