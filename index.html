@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vivekananda School | Shaping Future Leaders with Care & Excellence</title>
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <!-- Google Fonts - Preloaded for performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- SEO Meta Tags -->
     <meta name="description" content="Vivekananda School, Bagalur - Providing a safe, high-quality, value-based education for children seeking holistic development and academic excellence.">
     <!-- Font Awesome - Load asynchronously -->
@@ -11,10 +17,60 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="Images/School Logo.png">
-    <!-- Preload Hero Image -->
-    <link rel="preload" as="image" href="Images/School Image.jpeg">
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Preload Hero Image with High Priority -->
+    <link rel="preload" as="image" href="Images/School Image.jpeg" fetchpriority="high">
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --primary: #1E3A8A; --primary-light: #2563EB; --secondary: #FACC15; --white: #FFFFFF;
+            --gray-50: #F9FAFB; --gray-800: #1F2937; --text-main: #1F2937; --text-muted: #6B7280;
+            --radius-md: 1rem; --radius-lg: 1.5rem; --radius-full: 9999px;
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1); --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; color: var(--text-main); background-color: var(--white); line-height: 1.6; overflow-x: hidden; width: 100%; }
+        .container { width: 96%; max-width: 1300px; margin: 0 auto; padding: 0 30px; }
+        header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; padding: 16px 0; transition: var(--transition); }
+        header.scrolled { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 12px 0; box-shadow: var(--shadow-md); }
+        .header-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo-link { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 60px; width: auto; transition: var(--transition); flex-shrink: 0; }
+        header.scrolled .logo-img { height: 45px; }
+        .logo-name { font-size: 1.35rem; font-weight: 800; color: var(--white); display: block; }
+        header.scrolled .logo-name { color: var(--primary); }
+        .logo-sub { font-size: 0.7rem; color: var(--secondary); font-weight: 600; letter-spacing: 1px; }
+        .nav-links { display: flex; gap: 32px; }
+        .nav-links a { color: var(--white); font-weight: 500; font-size: 0.9rem; position: relative; transition: var(--transition); }
+        header.scrolled .nav-links a { color: var(--gray-800); }
+        .mobile-toggle { display: none; font-size: 24px; color: var(--white); cursor: pointer; background: none; border: none; padding: 8px; }
+        header.scrolled .mobile-toggle { color: var(--primary); }
+        @media (max-width: 992px) {
+            .nav-links { display: none; }
+            .mobile-toggle { display: block; }
+        }
+        .hero { height: 100vh; min-height: 600px; display: flex; align-items: center; position: relative; background: url('Images/School\\ Image.jpeg') center/cover no-repeat; color: white; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(37, 99, 235, 0.75) 0%, rgba(59, 130, 246, 0.45) 100%); }
+        .hero .container { position: relative; z-index: 2; max-width: 900px; text-align: left; width: 100%; }
+        .hero h1 { font-size: clamp(1.8rem, 7vw, 3.5rem); color: white; line-height: 1.1; margin-bottom: 24px; font-weight: 800; }
+        .hero p { font-size: 1rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 32px; }
+        .hero-btns { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 10px; }
+        .hero-btns .btn { padding: 12px 24px; font-size: 0.95rem; border-radius: 30px; min-height: 48px; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 30px; border-radius: var(--radius-full); font-weight: 600; font-size: 0.95rem; transition: var(--transition); cursor: pointer; border: none; box-shadow: var(--shadow-md); min-height: 44px; }
+        .btn-secondary { background-color: var(--secondary); color: var(--primary); }
+        .btn-white { background: white; color: var(--primary); }
+        @media (max-width: 768px) {
+            .hero { min-height: 300px !important; height: auto !important; padding: 80px 0 40px; }
+            .hero h1 { font-size: 1.8rem; margin-bottom: 15px; }
+            .hero p { font-size: 1rem; margin-bottom: 25px; }
+            .hero-btns { flex-direction: column; align-items: center; gap: 10px; }
+            .hero-btns .btn { padding: 10px 20px; font-size: 0.9rem; min-height: 44px; width: 90%; max-width: 260px; margin: 0 auto; display: flex; }
+            .container { padding: 0 20px; }
+        }
+    </style>
+    <!-- Async Load Full CSS -->
+    <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
     <!-- JSON-LD Schema Markup -->
     <script type="application/ld+json">
     {
@@ -43,7 +99,7 @@
         <div class="container header-container">
             <div class="logo">
                 <a href="index.html" class="logo-link">
-                    <img src="Images/School Logo.png" alt="Vivekananda School Logo" class="logo-img" width="70" height="70">
+                    <img src="Images/School Logo.png" alt="Vivekananda School Logo" class="logo-img" width="60" height="60">
                     <div class="logo-text">
                         <span class="logo-name">Vivekananda School</span>
                         <span class="logo-sub">Bagalur • Excellence Since 1999</span>
@@ -116,7 +172,7 @@
                 <span class="section-subtitle">Since 1999</span>
                 <h2 class="section-title">A Tradition of Excellence, A Future of Innovation</h2>
                 <p>Vivekananda School is dedicated to providing a nurturing environment where children are encouraged to explore their potential. Our mission is to combine traditional values with modern educational methods to build character, discipline, and intellectual curiosity.</p>
-                <div class="grid grid-2" style="margin-top: 30px;">
+                <div class="grid grid-2" style="margin-top: 25px;">
                     <div class="card" style="padding: 24px;">
                         <h4 style="margin-bottom: 10px; font-size: 1.1rem;"><i class="fas fa-eye" style="margin-right: 10px; color: var(--secondary);"></i> Our Vision</h4>
                         <p style="font-size: 0.9rem;">To empower students to become compassionate leaders and lifelong learners.</p>
@@ -126,7 +182,7 @@
                         <p style="font-size: 0.9rem;">To provide high-quality education focused on safety, integrity, and discipline.</p>
                     </div>
                 </div>
-                <div style="margin-top: 40px;">
+                <div style="margin-top: 30px;">
                     <a href="about.html" class="btn btn-outline">Learn More About Us</a>
                 </div>
             </div>
@@ -139,7 +195,7 @@
             <span class="section-subtitle">Excellence in Education</span>
             <h2 class="section-title">Why Parents Trust Vivekananda</h2>
             
-            <div class="grid grid-3" style="margin-top: 50px;">
+            <div class="grid grid-3" style="margin-top: 40px;">
                 <div class="card icon-card" data-reveal="fade-up">
                     <i class="fas fa-user-check"></i>
                     <h3>Individual Attention</h3>
@@ -209,7 +265,7 @@
             <span class="section-subtitle">World-Class Environment</span>
             <h2 class="section-title">Designed for Holistic Growth</h2>
             
-            <div class="facilities-grid" style="margin-top: 50px;">
+            <div class="facilities-grid" style="margin-top: 40px;">
                 <div class="facility-item" data-reveal="fade-up">
                     <img src="Images/facility/computer lab.jpeg" alt="Modern computer laboratory at Vivekananda School" loading="lazy" width="400" height="300">
                     <div class="facility-overlay">
@@ -260,19 +316,19 @@
     <section class="section-padding bg-primary text-white">
         <div class="container trust-grid">
             <div class="trust-item">
-                <span class="counter-num" data-target="25" style="font-size: 3rem; font-weight: 800; color: var(--secondary);">0</span>
+                <span class="counter-num" data-target="25" style="font-size: 2.5rem; font-weight: 800; color: var(--secondary);">0</span>
                 <span style="color: white;">Years of Excellence</span>
             </div>
             <div class="trust-item">
-                <span class="counter-num" data-target="1500" style="font-size: 3rem; font-weight: 800; color: var(--secondary);">0</span>
+                <span class="counter-num" data-target="1500" style="font-size: 2.5rem; font-weight: 800; color: var(--secondary);">0</span>
                 <span style="color: white;">Happy Students</span>
             </div>
             <div class="trust-item">
-                <span class="counter-num" data-target="100" style="font-size: 3rem; font-weight: 800; color: var(--secondary);">0</span>
+                <span class="counter-num" data-target="100" style="font-size: 2.5rem; font-weight: 800; color: var(--secondary);">0</span>
                 <span style="color: white;">Faculty Experts</span>
             </div>
             <div class="trust-item">
-                <span class="counter-num" data-target="100" style="font-size: 3rem; font-weight: 800; color: var(--secondary);">0</span>
+                <span class="counter-num" data-target="100" style="font-size: 2.5rem; font-weight: 800; color: var(--secondary);">0</span>
                 <span style="color: white;">% Results Record</span>
             </div>
         </div>
@@ -282,7 +338,7 @@
         <div class="container text-center">
             <span class="section-subtitle">Experience our Campus</span>
             <h2 class="section-title">Traditional Day & Food Festival - 2025</h2>
-            <div id="video-placeholder" style="margin-top: 40px; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-xl); aspect-ratio: 16/9; background: #000; cursor: pointer;" onclick="this.innerHTML = '<iframe width=\'100%\' height=\'100%\' src=\'https://www.youtube.com/embed/_tS2bRV2Il8?autoplay=1\' title=\'Traditional Day & Food Festival 2025 Video\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'" role="button" aria-label="Play Traditional Day & Food Festival 2025 Video">
+            <div id="video-placeholder" style="margin-top: 30px; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-xl); aspect-ratio: 16/9; background: #000; cursor: pointer;" onclick="this.innerHTML = '<iframe width=\'100%\' height=\'100%\' src=\'https://www.youtube.com/embed/_tS2bRV2Il8?autoplay=1\' title=\'Traditional Day & Food Festival 2025 Video\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'" role="button" aria-label="Play Traditional Day & Food Festival 2025 Video">
                  <img src="https://img.youtube.com/vi/_tS2bRV2Il8/maxresdefault.jpg" alt="Thumbnail for Traditional Day & Food Festival 2025" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;" loading="lazy" width="1280" height="720">
                  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90px; height: 90px; background: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--primary); box-shadow: 0 10px 25px rgba(0,0,0,0.3); transition: var(--transition);">
                      <i class="fas fa-play" aria-hidden="true"></i>
@@ -297,7 +353,7 @@
             <span class="section-subtitle">Parent Perspectives</span>
             <h2 class="section-title">What the Vivekananda Family Says</h2>
             
-            <div class="testimonials-grid" style="margin-top: 50px;">
+            <div class="testimonials-grid" style="margin-top: 40px;">
                 <div class="testimonial-card" data-reveal="fade-up">
                     <p class="testimonial-text">"The discipline and value-based education at Vivekananda have completely transformed my son's attitude towards learning. A truly safe environment."</p>
                     <div class="testimonial-author">
@@ -333,7 +389,7 @@
     <section class="section-padding final-cta text-center">
         <div class="container">
             <h2 class="animate__animated animate__pulse animate__infinite">Give Your Child the Best Future</h2>
-            <p style="color: white; font-size: 1.2rem; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">Join the 2026-27 Academic Session. Secure a seat in the most trusted school in Bagalur today.</p>
+            <p style="color: white; font-size: 1.1rem; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;">Join the 2026-27 Academic Session. Secure a seat in the most trusted school in Bagalur today.</p>
             <div class="hero-btns" style="justify-content: center;">
                 <a href="admissions.html" class="btn btn-secondary">Apply Online Now</a>
                 <a href="contact.html" class="btn btn-white">Contact Admissions</a>
