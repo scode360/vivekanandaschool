@@ -977,3 +977,438 @@ footer {
 
 .modal-content h2 { color: var(--primary); margin-bottom: 15px; }
 .modal-content p { color: var(--text-muted); margin-bottom: 30px; }
+
+/* ==========================================
+   BOARD EXAM ACHIEVERS & GALLERY FILTERS
+   ========================================== */
+
+/* Achiever Tabs and Switcher */
+.achiever-section {
+    position: relative;
+    background: linear-gradient(180deg, var(--white) 0%, var(--gray-50) 100%);
+}
+
+.achiever-tabs-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.achiever-tabs {
+    display: flex;
+    background: var(--gray-100);
+    padding: 6px;
+    border-radius: var(--radius-full);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--gray-200);
+}
+
+.achiever-tab-btn {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.achiever-tab-btn:hover {
+    color: var(--primary);
+}
+
+.achiever-tab-btn.active {
+    background: var(--white);
+    color: var(--primary);
+    box-shadow: var(--shadow-md);
+}
+
+/* Tab Content Display */
+.achiever-tab-pane {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.achiever-tab-pane.active {
+    display: block;
+    animation: achieverFadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes achieverFadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Achiever Grid Layout */
+.achievers-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1.8fr;
+    gap: 40px;
+    align-items: stretch;
+}
+
+@media (max-width: 992px) {
+    .achievers-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* Spotlight Card (Topper) */
+.achiever-spotlight-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-premium);
+    border: 2px solid var(--secondary);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: var(--transition);
+    position: relative;
+}
+
+.achiever-spotlight-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, var(--secondary) 0%, var(--primary-light) 100%);
+    z-index: 10;
+}
+
+.achiever-spotlight-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 50px -10px rgba(30, 58, 138, 0.2);
+}
+
+.spotlight-img-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: var(--gray-100);
+}
+
+.spotlight-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.achiever-spotlight-card:hover .spotlight-img-container img {
+    transform: scale(1.05);
+}
+
+.topper-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: linear-gradient(135deg, var(--secondary) 0%, #EAB308 100%);
+    color: var(--primary);
+    padding: 6px 16px;
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: var(--shadow-md);
+    z-index: 5;
+}
+
+.spotlight-info {
+    padding: 30px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.spotlight-info h3 {
+    font-size: 1.6rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.spotlight-meta {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.spotlight-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Achievers Side Grid */
+.achievers-side-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+@media (max-width: 600px) {
+    .achievers-side-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.achiever-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-100);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: var(--transition);
+}
+
+.achiever-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+}
+
+.achiever-img-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: var(--gray-100);
+}
+
+.achiever-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.achiever-card:hover .achiever-img-container img {
+    transform: scale(1.05);
+}
+
+.achiever-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(30, 58, 138, 0.9);
+    backdrop-filter: blur(4px);
+    color: white;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 5;
+}
+
+.achiever-info {
+    padding: 20px 24px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.achiever-info h4 {
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+    color: var(--primary);
+}
+
+.achiever-info p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+/* Gallery Filter Styles */
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary);
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover {
+    background: var(--gray-100);
+    color: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+    box-shadow: var(--shadow-md);
+}
+
+/* Gallery Animation during Filter */
+.gallery-grid .gallery-item {
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.4s ease;
+}
+
+.gallery-grid .gallery-item.hidden {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+}
+
+.gallery-grid .gallery-item.show {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+/* Premium Lightbox Modal */
+.lightbox-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2500;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lightbox-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 85%;
+    transform: scale(0.9);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lightbox-modal.active .lightbox-content {
+    transform: scale(1);
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 75vh;
+    border-radius: 12px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    display: block;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -55px;
+    right: 0;
+    color: var(--white);
+    font-size: 2.2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.lightbox-close:hover {
+    background: var(--secondary);
+    color: var(--primary);
+    transform: rotate(90deg);
+}
+
+.lightbox-caption {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    max-width: 600px;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .lightbox-img {
+        max-height: 65vh;
+    }
+    .lightbox-close {
+        top: -50px;
+        right: 10px;
+    }
+    .lightbox-caption {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+}
+
+/* Lightbox Clickable Zoom Cursor Hint */
+.spotlight-img-container img, 
+.achiever-img-container img, 
+.gallery-grid .gallery-item img {
+    cursor: zoom-in;
+}
+
+
+

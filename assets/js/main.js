@@ -132,4 +132,163 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 7. Board Exam Achiever Tabs
+    const tabButtons = document.querySelectorAll('.achiever-tab-btn');
+    const tabPanes = document.querySelectorAll('.achiever-tab-pane');
+
+    if (tabButtons.length > 0 && tabPanes.length > 0) {
+        tabButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetTabId = btn.getAttribute('data-tab');
+
+                // Remove active classes
+                tabButtons.forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-selected', 'false');
+                });
+                tabPanes.forEach(pane => {
+                    pane.classList.remove('active');
+                });
+
+                // Add active classes
+                btn.classList.add('active');
+                btn.setAttribute('aria-selected', 'true');
+                
+                const targetPane = document.getElementById(targetTabId);
+                if (targetPane) {
+                    targetPane.classList.add('active');
+                    
+                    // Trigger scroll reveal for newly visible images/cards
+                    const paneReveals = targetPane.querySelectorAll('[data-reveal]');
+                    paneReveals.forEach(el => {
+                        // Small timeout to allow transition display to register first
+                        setTimeout(() => {
+                            el.classList.add('revealed');
+                        }, 50);
+                    });
+                }
+            });
+        });
+    }
+
+    // 8. Dynamic Gallery Filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-grid .gallery-item');
+
+    if (filterBtns.length > 0 && galleryItems.length > 0) {
+        // Initialize by adding 'show' to all items
+        galleryItems.forEach(item => item.classList.add('show'));
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filterValue = btn.getAttribute('data-filter');
+
+                // Toggle active filter button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                galleryItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+
+                    if (filterValue === 'all' || category === filterValue) {
+                        // Show item
+                        item.classList.remove('hidden');
+                        // Small timeout for nice scale animation
+                        setTimeout(() => {
+                            item.classList.add('show');
+                        }, 20);
+                    } else {
+                        // Hide item
+                        item.classList.remove('show');
+                        // Let transition finish before hiding completely
+                        setTimeout(() => {
+                            if (!item.classList.contains('show')) {
+                                item.classList.add('hidden');
+                            }
+                        }, 400); // matches style.css transition time
+                    }
+                });
+            });
+        });
+    }
+
+    // 9. Premium Lightbox Feature
+    // Dynamically insert Lightbox HTML structure
+    const lightboxHTML = `
+        <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog">
+            <div class="lightbox-content">
+                <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">&times;</button>
+                <img class="lightbox-img" id="lightboxImg" src="" alt="">
+                <div class="lightbox-caption" id="lightboxCaption"></div>
+            </div>
+        </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    // Function to open Lightbox
+    const openLightbox = (src, alt) => {
+        if (!lightboxModal || !lightboxImg || !lightboxCaption) return;
+        lightboxImg.src = src;
+        lightboxImg.alt = alt;
+        lightboxCaption.textContent = alt || 'Image Preview';
+        lightboxModal.classList.add('active');
+        lightboxModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden'; // Lock background scrolling
+    };
+
+    // Function to close Lightbox
+    const closeLightbox = () => {
+        if (!lightboxModal) return;
+        lightboxModal.classList.remove('active');
+        lightboxModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = ''; // Unlock background scrolling
+        // Clear src after fade transition completes to avoid flash of old image next time
+        setTimeout(() => {
+            if (!lightboxModal.classList.contains('active')) {
+                lightboxImg.src = '';
+            }
+        }, 400);
+    };
+
+    // Attach click events to achiever images and gallery items
+    document.body.addEventListener('click', (e) => {
+        // Find if the clicked element is an image inside an achiever card or gallery item
+        const img = e.target.closest('.spotlight-img-container img, .achiever-img-container img, .gallery-item img');
+        if (img) {
+            e.preventDefault();
+            // Retrieve original src and alt/caption details
+            const src = img.getAttribute('src');
+            const alt = img.getAttribute('alt') || img.parentElement.nextElementSibling?.textContent || '';
+            openLightbox(src, alt);
+        }
+    });
+
+    // Close on click of background or close button
+    if (lightboxModal && lightboxClose) {
+        lightboxClose.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeLightbox();
+        });
+        lightboxModal.addEventListener('click', (e) => {
+            // Close only if clicking the background backdrop, not the image content itself
+            if (e.target === lightboxModal) {
+                closeLightbox();
+            }
+        });
+    }
+
+    // Close on Escape key press
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightboxModal && lightboxModal.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
 });
+
+
